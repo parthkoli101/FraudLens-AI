@@ -1,51 +1,121 @@
-# FraudLens-AI
-An AI-powered investigation platform that analyzes flagged UPI transactions using XGBoost and Generative AI (Claude) to detect anomalies, generate explainable reports, and assist banking operations with real-time decision support.
+# 🔍 FraudLens AI
+## Financial Intelligence & Investigation AI System
 
+> Intelligent UPI Transaction Investigation powered by XGBoost + Claude AI
 
-🔍 FraudLens AI — Financial Intelligence & Investigation System
+---
 
-FraudLens AI is an intelligent investigation assistant designed to simulate real-world banking workflows for analyzing flagged UPI transactions. The system combines Machine Learning and Generative AI to detect anomalies, generate explainable investigation reports, and assist decision-making in high-volume financial environments.
+## 🚀 Quick Start
 
-Built using XGBoost for fraud detection and Claude AI for reasoning and report generation, the platform enables operations teams to analyze transaction patterns, identify inconsistencies, and take informed actions through an interactive dashboard.
+### 1. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
 
-🚀 Key Highlights
+### 2. Launch the Dashboard
+```bash
+streamlit run app.py
+```
+Open: **http://localhost:8501**
 
-🔹 UPI Transaction Investigation System
-Analyzes customer, merchant, and transaction data to detect suspicious patterns and inconsistencies.
+### 3. (Optional) Start Live Transaction Emitter
+In a **separate terminal**:
+```bash
+python emitter.py
+```
+This streams one transaction every 5 seconds into the Live Feed tab.
 
-🔹 ML-Based Fraud Detection
-Uses XGBoost with engineered features like amount deviation, device/IP mismatch, and location anomalies.
+---
 
-🔹 AI-Powered Investigation Reports
-Generates structured, explainable reports using Generative AI, including reasoning, inconsistencies, and recommended actions.
+## 🔑 API Key Setup
+1. Get your Anthropic API key from https://console.anthropic.com
+2. Enter it in the **sidebar** of the dashboard under "Anthropic API Key"
+3. The key enables AI-powered investigation reports using Claude Sonnet
 
-🔹 Real-Time Monitoring Dashboard
-Streamlit-based interface with KPI metrics, fraud distribution, and live transaction tracking.
+> Without an API key, the system uses rule-based fallback reports.
 
-🔹 Anomaly Detection Engine
-Identifies abnormal behavior such as unusual transaction spikes, new device usage, and location mismatches.
+---
 
-🔹 Audit Trail & Decision Logging
-Maintains a complete record of investigation decisions for compliance and traceability.
+## 📁 File Structure
+```
+fraudlens/
+├── app.py                  # Main Streamlit dashboard
+├── ml_model.py             # XGBoost fraud detection model
+├── ai_report.py            # Claude AI report generation
+├── datastore.py            # SQLite audit trail & live feed
+├── emitter.py              # Real-time transaction simulator
+├── requirements.txt        # Python dependencies
+├── upi_customers.csv       # Customer dataset
+├── upi_merchants.csv       # Merchant dataset
+└── upi_transactions.csv    # Transaction dataset
+```
 
-🎯 Objective
+---
 
-The system is designed to assist banking operations teams during the Exception Investigation Phase by:
+## 🎯 Features
 
-Analyzing flagged transactions
+### Command Center
+- Live KPI metrics (total transactions, flagged cases, fraud rate)
+- Fraud probability distribution chart
+- City-wise flagged transaction heatmap
+- Risk level breakdown (CRITICAL / HIGH / MEDIUM / LOW)
+- One-click investigation launch from flagged list
 
-Identifying inconsistencies across datasets
+### Investigation Panel
+- Full transaction, customer, and merchant data display
+- XGBoost fraud probability score with gauge visualization
+- Anomaly flag highlighting (new device, new IP, location mismatch, amount spike)
+- Customer transaction history chart
+- **AI-generated investigation report** (Claude AI):
+  - Investigation outcome
+  - Detected inconsistencies
+  - AI reasoning (3-4 paragraph)
+  - Recommended action
+- Officer decision buttons: CONFIRM FRAUD / CLEAR / ESCALATE
+- Auto-saves to audit trail
 
-Providing explainable AI-driven decisions
+### Analytics Hub
+- Transaction amount by city
+- Customer distribution by bank
+- Fraud risk by age group
+- Top merchants by fraud exposure
+- Amount vs. fraud probability scatter
 
-Recommending actionable next steps
+### Audit Trail
+- Complete log of all officer decisions
+- Compliance-ready record with timestamps
+- Decision summary statistics
 
-🧠 AI + ML Approach
+### Live Feed (Real-Time Simulation)
+- Streams transactions from `emitter.py`
+- Auto-detects high-risk transactions
+- Visual FRAUD ALERT banners
+- Auto-refresh toggle (5s interval)
 
-Machine Learning: XGBoost classifier for fraud probability scoring
+---
 
-Feature Engineering: Transaction patterns, behavioral anomalies, and contextual signals
+## 🧠 ML Model Details
 
-Generative AI: Claude AI for structured investigation reports and reasoning
+**Algorithm**: XGBoost Classifier  
+**Balancing**: SMOTE oversampling  
+**Features**: 
+- Account balance, transaction amount, amount ratio
+- Device/IP mismatch flags
+- Location mismatch (home branch vs transaction city)
+- Transaction velocity, merchant diversity
 
-Fallback Logic: Rule-based reporting when API is unavailable
+**Fraud Label Logic** (rule-based for dataset generation):
+- Amount > 1.5x customer's last transaction
+- Different city from home branch
+- Unregistered device used
+- Unknown IP address
+
+---
+
+## 🏆 Hackathon Demo Tips
+
+1. **Start with Command Center** — show the KPI overview
+2. **Click "Investigate →"** on a CRITICAL risk transaction
+3. **Hit "Generate AI Investigation Report"** — wow the judges
+4. **Make a decision** — show the audit trail populating
+5. **Open Live Feed** + run `emitter.py` in another terminal — demonstrate real-time event-driven capability

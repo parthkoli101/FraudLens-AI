@@ -1,0 +1,301 @@
+merchant_uuid,merchant_name,merchant_upi_id,merchant_bank_name,merchant_account_number,merchant_ifsc_code,merchant_bank_branch,merchant_bank_address,merchant_account_open_date
+MER0001,"Tak, Samra and Balakrishnan","tak,samraandbalakrishnan@okhdfcbank",Kotak Mahindra Bank,5498095763,KOTA000472,Mumbai Main Branch,"97/83, Mannan Chowk, Tiruvottiyur 724850",2022-09-08
+MER0002,Varma Ltd,varmaltd@okhdfcbank,Kotak Mahindra Bank,6872496562,KOTA000940,Chennai Anna Salai,"23/932, Som Path, Madurai 694710",2018-11-01
+MER0003,Ratta-Sarna,ratta-sarna@okhdfcbank,Kotak Mahindra Bank,5998889740,KOTA000774,Bangalore MG Road,"16/528, Shere Street, Junagadh 996322",2024-08-28
+MER0004,Sachar-Ramesh,sachar-ramesh@okhdfcbank,Kotak Mahindra Bank,3322576648,KOTA000428,Bangalore MG Road,"H.No. 980, Edwin Path, Mehsana-884477",2024-07-04
+MER0005,Ahluwalia-Sem,ahluwalia-sem@okhdfcbank,SBI,7020595806,SBI000578,Bangalore MG Road,"460, Shankar Ganj, Katni 098479",2021-11-27
+MER0006,"Srinivas, Mall and Keer","srinivas,mallandkeer@okhdfcbank",Axis Bank,9115036120,AXIS000791,Kolkata Park Street,"73/06, Jani Circle, Darbhanga-364178",2025-09-19
+MER0007,"Mann, Ganesan and Tiwari","mann,ganesanandtiwari@okhdfcbank",SBI,2854186059,SBI000716,Bangalore MG Road,"44, Kothari Nagar, Bidhannagar-757928",2016-07-23
+MER0008,Arya and Sons,aryaandsons@okhdfcbank,ICICI Bank,7298806502,ICIC000871,Kolkata Park Street,"39/98, Ranganathan Path, Jammu-986540",2017-08-19
+MER0009,Magar-Bala,magar-bala@okhdfcbank,ICICI Bank,4821408121,ICIC000451,Kolkata Park Street,"H.No. 97, Ray Circle, Mahbubnagar 160058",2018-07-13
+MER0010,Banerjee-Kibe,banerjee-kibe@okhdfcbank,ICICI Bank,7866761721,ICIC000653,Delhi Connaught Place,"97/766, Mann Path, Thrissur-164651",2017-04-28
+MER0011,Walla Inc,wallainc@okhdfcbank,Kotak Mahindra Bank,8272302214,KOTA000183,Chennai Anna Salai,"262, Rau Chowk, Kamarhati-504040",2026-01-29
+MER0012,Chaudhry and Sons,chaudhryandsons@okhdfcbank,HDFC Bank,3336448202,HDFC000632,Mumbai Main Branch,"36, Ramesh Nagar, Udaipur 781936",2021-11-07
+MER0013,Jha-Goyal,jha-goyal@okhdfcbank,Kotak Mahindra Bank,5312321117,KOTA000663,Delhi Connaught Place,"05/62, Ramaswamy Zila, Bhind 416463",2018-11-13
+MER0014,Borde Group,bordegroup@okhdfcbank,ICICI Bank,8678217181,ICIC000600,Mumbai Main Branch,"79, Chad Road, Giridih 117521",2019-10-22
+MER0015,"Konda, Bawa and Chad","konda,bawaandchad@okhdfcbank",Axis Bank,8717682499,AXIS000661,Chennai Anna Salai,"93, Barad Path, Bellary 153585",2017-04-09
+MER0016,Balakrishnan-Sharma,balakrishnan-sharma@okhdfcbank,Kotak Mahindra Bank,2687061995,KOTA000690,Bangalore MG Road,"92/90, Grewal, Gudivada-062209",2021-05-22
+MER0017,Rege LLC,regellc@okhdfcbank,SBI,5243215450,SBI000331,Chennai Anna Salai,"48, De, Kishanganj-552365",2021-10-13
+MER0018,"Som, Sachdeva and Dara","som,sachdevaanddara@okhdfcbank",ICICI Bank,5757968510,ICIC000247,Mumbai Main Branch,"76, Dugal Street, Baranagar-691916",2024-12-16
+MER0019,"Sankar, Chada and Rastogi","sankar,chadaandrastogi@okhdfcbank",Axis Bank,7039238878,AXIS000945,Delhi Connaught Place,"70, Vyas Nagar, Bilaspur 756856",2016-04-05
+MER0020,Kapur-Wable,kapur-wable@okhdfcbank,Kotak Mahindra Bank,3741256933,KOTA000934,Delhi Connaught Place,"74, Chander Road, Yamunanagar-990159",2019-02-22
+MER0021,"Hari, Sachdeva and Aurora","hari,sachdevaandaurora@okhdfcbank",HDFC Bank,1069664379,HDFC000402,Mumbai Main Branch,"31/74, Raval Road, Warangal 226909",2025-06-04
+MER0022,"Kaul, Shah and Buch","kaul,shahandbuch@okhdfcbank",ICICI Bank,1306386460,ICIC000359,Chennai Anna Salai,"86/661, Dugal Circle, Singrauli-934297",2022-10-06
+MER0023,Shukla-Hari,shukla-hari@okhdfcbank,HDFC Bank,2730875303,HDFC000814,Kolkata Park Street,"05/730, Grewal, Raebareli 494790",2023-09-28
+MER0024,Sinha and Sons,sinhaandsons@okhdfcbank,Axis Bank,6768869447,AXIS000483,Delhi Connaught Place,"23/277, Sen Chowk, Yamunanagar 830337",2021-06-11
+MER0025,Khosla-Loke,khosla-loke@okhdfcbank,Axis Bank,9769785826,AXIS000603,Mumbai Main Branch,"50/06, Karnik Marg, Agra 316344",2022-09-03
+MER0026,Dugar-Khanna,dugar-khanna@okhdfcbank,SBI,6667775644,SBI000131,Bangalore MG Road,"H.No. 842, Kulkarni, Amroha-736334",2024-03-08
+MER0027,Krish and Sons,krishandsons@okhdfcbank,SBI,5715903364,SBI000805,Kolkata Park Street,"24, Toor Nagar, Bhubaneswar-159850",2021-06-30
+MER0028,Ghose-Sant,ghose-sant@okhdfcbank,Kotak Mahindra Bank,9077269035,KOTA000801,Chennai Anna Salai,"H.No. 43, Khatri Marg, Ludhiana 099474",2020-02-29
+MER0029,Dewan PLC,dewanplc@okhdfcbank,HDFC Bank,2631947122,HDFC000599,Mumbai Main Branch,"25/79, Raj Path, Thrissur-819093",2022-11-07
+MER0030,Wadhwa LLC,wadhwallc@okhdfcbank,SBI,1395346763,SBI000351,Mumbai Main Branch,"76, Aggarwal Chowk, Tadipatri-386697",2022-03-02
+MER0031,Gupta Inc,guptainc@okhdfcbank,SBI,2449047673,SBI000718,Chennai Anna Salai,"H.No. 88, Ghosh Zila, Khammam 953837",2022-10-20
+MER0032,Halder and Sons,halderandsons@okhdfcbank,HDFC Bank,6681694166,HDFC000665,Chennai Anna Salai,"72/243, Zachariah, Nadiad 598239",2023-07-19
+MER0033,"Lala, Balay and Bhatnagar","lala,balayandbhatnagar@okhdfcbank",ICICI Bank,7930862832,ICIC000197,Mumbai Main Branch,"66/41, Solanki Zila, Mathura 918408",2017-12-16
+MER0034,Wason LLC,wasonllc@okhdfcbank,ICICI Bank,7469485764,ICIC000170,Kolkata Park Street,"80/27, Setty, Tenali 458619",2018-08-21
+MER0035,"Trivedi, Sethi and Savant","trivedi,sethiandsavant@okhdfcbank",ICICI Bank,7284310145,ICIC000813,Kolkata Park Street,"01, Grewal Chowk, Imphal 366680",2016-12-10
+MER0036,Cherian Inc,cherianinc@okhdfcbank,SBI,4110977657,SBI000359,Kolkata Park Street,"262, Buch Marg, Karimnagar 584976",2017-05-11
+MER0037,"Dewan, De and Aurora","dewan,deandaurora@okhdfcbank",HDFC Bank,3109254172,HDFC000562,Bangalore MG Road,"52/320, Kaur Nagar, Berhampur 710619",2016-03-06
+MER0038,Sankar Inc,sankarinc@okhdfcbank,ICICI Bank,5465977847,ICIC000715,Bangalore MG Road,"H.No. 45, Rajagopal Chowk, Tenali 553902",2023-11-28
+MER0039,Hegde Inc,hegdeinc@okhdfcbank,SBI,4596495823,SBI000303,Chennai Anna Salai,"37/60, Sridhar, Meerut-468289",2017-05-21
+MER0040,"Choudhury, Ramachandran and Rama","choudhury,ramachandranandrama@okhdfcbank",SBI,2069630090,SBI000496,Delhi Connaught Place,"29/188, Sura Zila, Gangtok 574059",2018-02-28
+MER0041,Divan and Sons,divanandsons@okhdfcbank,SBI,5483407610,SBI000287,Delhi Connaught Place,"99/27, Chaudhuri Marg, Kollam 412195",2024-07-03
+MER0042,"Datta, Srinivas and Gole","datta,srinivasandgole@okhdfcbank",Axis Bank,3118926603,AXIS000830,Chennai Anna Salai,"942, Dalal Street, Chennai-579792",2018-05-01
+MER0043,"Dyal, Ratta and Mallick","dyal,rattaandmallick@okhdfcbank",HDFC Bank,1436101202,HDFC000242,Delhi Connaught Place,"09, Bala Zila, Amritsar-967647",2020-01-03
+MER0044,"Mani, Kala and Gopal","mani,kalaandgopal@okhdfcbank",Kotak Mahindra Bank,3417082009,KOTA000548,Chennai Anna Salai,"H.No. 712, Thakkar Zila, Shimoga-302785",2023-06-04
+MER0045,Srinivas Inc,srinivasinc@okhdfcbank,Axis Bank,2846721961,AXIS000825,Kolkata Park Street,"H.No. 746, Sant Road, Shivpuri 453927",2023-03-30
+MER0046,"Kanda, Bose and Rattan","kanda,boseandrattan@okhdfcbank",Axis Bank,5751643053,AXIS000585,Mumbai Main Branch,"H.No. 831, Brahmbhatt Nagar, Nandyal-654548",2024-06-04
+MER0047,Gandhi-Divan,gandhi-divan@okhdfcbank,Axis Bank,8310239458,AXIS000168,Mumbai Main Branch,"H.No. 30, Thakkar Street, Kottayam-368953",2021-10-29
+MER0048,"Chaudry, Seth and Edwin","chaudry,sethandedwin@okhdfcbank",HDFC Bank,6831030525,HDFC000510,Kolkata Park Street,"H.No. 676, Batta Path, Machilipatnam-965402",2018-06-15
+MER0049,Toor-Lala,toor-lala@okhdfcbank,ICICI Bank,4760385504,ICIC000223,Mumbai Main Branch,"90/967, Venkataraman Zila, Salem-688174",2023-11-01
+MER0050,Banik LLC,banikllc@okhdfcbank,ICICI Bank,9960923252,ICIC000291,Delhi Connaught Place,"44/50, Guha Zila, Panchkula-628214",2019-01-09
+MER0051,"Mangat, Dugar and Barman","mangat,dugarandbarman@okhdfcbank",SBI,7639671096,SBI000670,Bangalore MG Road,"94/82, Swamy Path, Raipur 964103",2023-06-05
+MER0052,Dara-Swaminathan,dara-swaminathan@okhdfcbank,SBI,2774920001,SBI000673,Mumbai Main Branch,"H.No. 981, Karnik Nagar, Amritsar-561065",2023-05-29
+MER0053,"Karpe, Mangat and Krishnan","karpe,mangatandkrishnan@okhdfcbank",ICICI Bank,1869504394,ICIC000407,Delhi Connaught Place,"313, Mall Ganj, Raipur 978379",2024-07-01
+MER0054,Chakrabarti LLC,chakrabartillc@okhdfcbank,SBI,5343043522,SBI000161,Kolkata Park Street,"H.No. 243, Gopal Street, Karimnagar-873003",2024-11-05
+MER0055,Dass LLC,dassllc@okhdfcbank,HDFC Bank,8155034104,HDFC000699,Kolkata Park Street,"H.No. 60, Raj Road, Thrissur-066847",2023-12-13
+MER0056,Hans PLC,hansplc@okhdfcbank,HDFC Bank,4485201635,HDFC000427,Delhi Connaught Place,"H.No. 345, Chaudhry Ganj, Darbhanga 891411",2023-09-04
+MER0057,Goyal Group,goyalgroup@okhdfcbank,SBI,4441236442,SBI000293,Chennai Anna Salai,"07/15, Andra Circle, Mangalore 367276",2025-08-07
+MER0058,"Bora, Devan and Chauhan","bora,devanandchauhan@okhdfcbank",SBI,3056148393,SBI000201,Delhi Connaught Place,"96/657, Babu Street, Mau 796281",2018-10-20
+MER0059,Bir PLC,birplc@okhdfcbank,SBI,1304592812,SBI000783,Delhi Connaught Place,"H.No. 616, Roy, Medininagar 113277",2025-08-10
+MER0060,Tandon-Anne,tandon-anne@okhdfcbank,Kotak Mahindra Bank,4266400036,KOTA000589,Kolkata Park Street,"04/961, Deol Chowk, Chennai-352122",2018-06-20
+MER0061,"Bobal, Sharma and Kant","bobal,sharmaandkant@okhdfcbank",HDFC Bank,3431627558,HDFC000352,Chennai Anna Salai,"H.No. 05, Hans Chowk, Shahjahanpur 016469",2022-01-22
+MER0062,Sule Inc,suleinc@okhdfcbank,Axis Bank,5026998075,AXIS000947,Bangalore MG Road,"09/97, Mand Zila, Allahabad-207567",2024-10-08
+MER0063,Bera and Sons,beraandsons@okhdfcbank,SBI,2854871996,SBI000991,Bangalore MG Road,"903, Badal Nagar, Katihar 016325",2026-01-08
+MER0064,"Kothari, Ravel and Handa","kothari,ravelandhanda@okhdfcbank",SBI,1118821302,SBI000787,Bangalore MG Road,"95, Sama Nagar, Moradabad-346242",2022-08-01
+MER0065,Chowdhury-Warrior,chowdhury-warrior@okhdfcbank,SBI,4897716760,SBI000590,Kolkata Park Street,"H.No. 43, Deep Road, Bihar Sharif-441850",2021-06-04
+MER0066,Deshpande-Randhawa,deshpande-randhawa@okhdfcbank,Kotak Mahindra Bank,9112094321,KOTA000761,Delhi Connaught Place,"890, Acharya Circle, Ghaziabad-107390",2017-06-25
+MER0067,Char and Sons,charandsons@okhdfcbank,ICICI Bank,6530318753,ICIC000891,Mumbai Main Branch,"H.No. 58, Char Ganj, Ballia-457289",2019-01-08
+MER0068,Shetty-Ravi,shetty-ravi@okhdfcbank,SBI,3576214947,SBI000527,Mumbai Main Branch,"429, Vohra Path, Solapur 004583",2018-01-21
+MER0069,Lala LLC,lalallc@okhdfcbank,Kotak Mahindra Bank,9954331046,KOTA000895,Delhi Connaught Place,"84/79, Kata Path, Bidar 617505",2023-02-07
+MER0070,"Wable, Virk and Kari","wable,virkandkari@okhdfcbank",HDFC Bank,6882048479,HDFC000502,Bangalore MG Road,"H.No. 35, Sagar Ganj, Bhusawal 248873",2021-02-02
+MER0071,Dhaliwal-Andra,dhaliwal-andra@okhdfcbank,SBI,6761624035,SBI000956,Kolkata Park Street,"H.No. 510, Raju Ganj, Bhilai 972288",2019-12-31
+MER0072,"Kari, Sarkar and Ghose","kari,sarkarandghose@okhdfcbank",Kotak Mahindra Bank,9368726364,KOTA000623,Chennai Anna Salai,"H.No. 69, Deshpande Marg, Chapra 721964",2020-09-09
+MER0073,Chand and Sons,chandandsons@okhdfcbank,SBI,5884526046,SBI000445,Mumbai Main Branch,"95/599, Krish, Ozhukarai-338322",2025-10-05
+MER0074,"Choudhary, Raval and Bose","choudhary,ravalandbose@okhdfcbank",SBI,9483533885,SBI000645,Kolkata Park Street,"150, Lala Road, Bhatpara-803242",2016-08-14
+MER0075,"Thakur, Som and Bhalla","thakur,somandbhalla@okhdfcbank",Kotak Mahindra Bank,3711695796,KOTA000357,Bangalore MG Road,"H.No. 36, Agrawal Street, Alappuzha 685690",2024-04-01
+MER0076,Chaudhari and Sons,chaudhariandsons@okhdfcbank,Axis Bank,9051996458,AXIS000708,Kolkata Park Street,"H.No. 12, Kumer Marg, Buxar-675896",2022-03-09
+MER0077,"Loyal, Sekhon and Bath","loyal,sekhonandbath@okhdfcbank",ICICI Bank,9185395140,ICIC000345,Kolkata Park Street,"70/893, Dugal Path, Nangloi Jat-651013",2023-11-06
+MER0078,"Sen, Jain and Varkey","sen,jainandvarkey@okhdfcbank",ICICI Bank,2315753081,ICIC000945,Bangalore MG Road,"52/642, Ganguly Road, Jammu 703379",2025-02-16
+MER0079,Dyal-Bansal,dyal-bansal@okhdfcbank,Kotak Mahindra Bank,8198795199,KOTA000385,Bangalore MG Road,"H.No. 77, Sane Marg, Varanasi 782790",2017-04-28
+MER0080,"Lala, Iyengar and Venkataraman","lala,iyengarandvenkataraman@okhdfcbank",Kotak Mahindra Bank,3830860764,KOTA000886,Kolkata Park Street,"91, Kamdar Zila, Munger 306175",2021-06-22
+MER0081,"Johal, Dutt and Dugar","johal,duttanddugar@okhdfcbank",ICICI Bank,8251331492,ICIC000294,Bangalore MG Road,"58/99, Chakrabarti Circle, Rourkela 501267",2019-07-25
+MER0082,Chaudhary Group,chaudharygroup@okhdfcbank,Kotak Mahindra Bank,7669668433,KOTA000309,Chennai Anna Salai,"09/22, Kapadia Path, Lucknow-986520",2019-08-23
+MER0083,Behl-Ahuja,behl-ahuja@okhdfcbank,Kotak Mahindra Bank,3233866964,KOTA000220,Bangalore MG Road,"H.No. 05, Kulkarni Street, Medininagar-955963",2021-02-15
+MER0084,Bhandari LLC,bhandarillc@okhdfcbank,ICICI Bank,8861462036,ICIC000287,Chennai Anna Salai,"16/044, Bath, Katni 671148",2018-11-04
+MER0085,"Sha, Bhalla and Venkatesh","sha,bhallaandvenkatesh@okhdfcbank",Axis Bank,6349956494,AXIS000595,Bangalore MG Road,"51/093, Bath Chowk, Phagwara 556280",2017-07-16
+MER0086,Ramanathan Group,ramanathangroup@okhdfcbank,Kotak Mahindra Bank,2466299416,KOTA000360,Kolkata Park Street,"722, Kari Road, Saharsa-968137",2019-10-24
+MER0087,Butala-Mann,butala-mann@okhdfcbank,HDFC Bank,2084632548,HDFC000485,Kolkata Park Street,"998, Lad Path, Imphal 408098",2024-09-29
+MER0088,Dash-Kapoor,dash-kapoor@okhdfcbank,SBI,1014031971,SBI000293,Bangalore MG Road,"97, Goyal, Bathinda 220901",2021-10-23
+MER0089,Khare PLC,khareplc@okhdfcbank,SBI,7732162114,SBI000303,Bangalore MG Road,"549, Sunder Nagar, Jhansi-627942",2016-08-11
+MER0090,Bahri and Sons,bahriandsons@okhdfcbank,HDFC Bank,9510811156,HDFC000743,Chennai Anna Salai,"H.No. 779, Subramanian Path, Raichur 053349",2021-11-29
+MER0091,Bhat-Tailor,bhat-tailor@okhdfcbank,Kotak Mahindra Bank,5759163820,KOTA000547,Chennai Anna Salai,"H.No. 73, Dara Path, Tirunelveli 050010",2022-05-05
+MER0092,Divan Group,divangroup@okhdfcbank,Axis Bank,1513011414,AXIS000285,Mumbai Main Branch,"22/045, Khurana Zila, Guwahati 087390",2021-02-19
+MER0093,Dhillon Ltd,dhillonltd@okhdfcbank,Axis Bank,5270013445,AXIS000142,Mumbai Main Branch,"40/74, Butala Ganj, Dhule-299565",2017-07-10
+MER0094,Sami-Dora,sami-dora@okhdfcbank,Axis Bank,7593731031,AXIS000230,Mumbai Main Branch,"58, Behl Chowk, Chittoor-730956",2019-01-11
+MER0095,Basu Ltd,basultd@okhdfcbank,SBI,1880007635,SBI000776,Kolkata Park Street,"54, Tripathi Circle, Satna 331008",2026-01-05
+MER0096,Swamy-Jain,swamy-jain@okhdfcbank,HDFC Bank,1042331617,HDFC000445,Kolkata Park Street,"H.No. 567, Zachariah Marg, Rampur-235193",2018-08-11
+MER0097,"Lala, Kadakia and Thaman","lala,kadakiaandthaman@okhdfcbank",Axis Bank,6515545907,AXIS000346,Delhi Connaught Place,"H.No. 42, Ramanathan Zila, Tadepalligudem 807932",2020-11-16
+MER0098,Goda-Lalla,goda-lalla@okhdfcbank,ICICI Bank,7668434075,ICIC000960,Delhi Connaught Place,"51/494, Bhakta Marg, Tiruchirappalli-206419",2024-02-15
+MER0099,"Keer, Sampath and Madan","keer,sampathandmadan@okhdfcbank",ICICI Bank,9688521544,ICIC000698,Bangalore MG Road,"H.No. 131, Kala Circle, Siliguri-267044",2022-12-09
+MER0100,Sen Inc,seninc@okhdfcbank,ICICI Bank,2646140692,ICIC000654,Kolkata Park Street,"23/105, Jain Road, Pondicherry 053072",2021-03-18
+MER0101,Wagle Group,waglegroup@okhdfcbank,HDFC Bank,5099431684,HDFC000193,Kolkata Park Street,"90/050, Vyas, Sambalpur-391819",2016-08-28
+MER0102,"Andra, Grewal and Ravi","andra,grewalandravi@okhdfcbank",Kotak Mahindra Bank,3088458262,KOTA000197,Delhi Connaught Place,"H.No. 106, Gala Chowk, Allahabad 616645",2022-01-06
+MER0103,Grover-Ratti,grover-ratti@okhdfcbank,SBI,1949073911,SBI000570,Kolkata Park Street,"99/02, Warrior Road, Kota 117903",2023-04-18
+MER0104,Rajagopal-Som,rajagopal-som@okhdfcbank,ICICI Bank,4830617667,ICIC000325,Bangalore MG Road,"H.No. 279, Krishnan Ganj, Raichur 470652",2019-09-07
+MER0105,"Chopra, Sangha and Kunda","chopra,sanghaandkunda@okhdfcbank",HDFC Bank,1013608013,HDFC000787,Bangalore MG Road,"H.No. 859, Bhalla Road, Gwalior 993288",2019-08-13
+MER0106,Devi LLC,devillc@okhdfcbank,SBI,6955845294,SBI000318,Delhi Connaught Place,"00/585, Guha Nagar, Kanpur 503773",2025-02-01
+MER0107,Shan-Chakrabarti,shan-chakrabarti@okhdfcbank,HDFC Bank,4639049378,HDFC000518,Chennai Anna Salai,"505, Saha Street, Bhilai 777783",2025-12-15
+MER0108,Dugal and Sons,dugalandsons@okhdfcbank,SBI,9109406829,SBI000971,Kolkata Park Street,"36/36, Datta Nagar, Pallavaram 324485",2023-03-14
+MER0109,"Goda, Dhillon and Koshy","goda,dhillonandkoshy@okhdfcbank",SBI,9688833034,SBI000883,Bangalore MG Road,"00/97, Sahota Zila, Kulti 394344",2018-06-17
+MER0110,Cherian-Gaba,cherian-gaba@okhdfcbank,ICICI Bank,7406028880,ICIC000908,Kolkata Park Street,"898, Bakshi Path, Rajahmundry 316006",2025-04-27
+MER0111,"Lata, Bhatia and Doshi","lata,bhatiaanddoshi@okhdfcbank",Axis Bank,2383323148,AXIS000611,Kolkata Park Street,"H.No. 59, Mane Path, Tiruppur 585235",2017-10-30
+MER0112,Yogi-Dar,yogi-dar@okhdfcbank,Kotak Mahindra Bank,6177452419,KOTA000247,Mumbai Main Branch,"H.No. 479, Sodhi Path, Kirari Suleman Nagar-881639",2020-11-19
+MER0113,"Ranganathan, Kanda and Bandi","ranganathan,kandaandbandi@okhdfcbank",Kotak Mahindra Bank,8229625864,KOTA000272,Chennai Anna Salai,"41, Chand, Akola 065846",2020-10-17
+MER0114,Bedi-Bajwa,bedi-bajwa@okhdfcbank,ICICI Bank,6230962491,ICIC000461,Chennai Anna Salai,"73/31, Seth Street, Pimpri-Chinchwad 463426",2025-07-02
+MER0115,Lata Ltd,lataltd@okhdfcbank,Axis Bank,6286655829,AXIS000714,Chennai Anna Salai,"59/987, Batra Marg, Udupi 122884",2024-10-01
+MER0116,"Ram, Tella and Sami","ram,tellaandsami@okhdfcbank",HDFC Bank,3419394235,HDFC000760,Mumbai Main Branch,"711, Agate Marg, Mehsana 149203",2023-02-21
+MER0117,"Bhagat, Kapadia and Dutt","bhagat,kapadiaanddutt@okhdfcbank",SBI,5388938226,SBI000685,Bangalore MG Road,"163, Ratta Chowk, Bikaner-861798",2024-11-06
+MER0118,Dave Inc,daveinc@okhdfcbank,Axis Bank,2636257705,AXIS000602,Chennai Anna Salai,"H.No. 283, Suresh Nagar, Hospet-707503",2019-12-05
+MER0119,Venkataraman-Rama,venkataraman-rama@okhdfcbank,SBI,9199900162,SBI000191,Chennai Anna Salai,"H.No. 377, Venkatesh Zila, Pali 654950",2018-04-11
+MER0120,Kala Ltd,kalaltd@okhdfcbank,Axis Bank,2495636685,AXIS000375,Bangalore MG Road,"56/152, Ravi Zila, Tezpur 366001",2018-03-30
+MER0121,Jain Ltd,jainltd@okhdfcbank,Axis Bank,3055273936,AXIS000272,Delhi Connaught Place,"03/747, Kumer Zila, Shahjahanpur-697266",2019-06-05
+MER0122,Jani Group,janigroup@okhdfcbank,Kotak Mahindra Bank,4479534060,KOTA000966,Mumbai Main Branch,"822, Jayaraman Ganj, Ghaziabad 389601",2021-01-10
+MER0123,Hegde-Chakraborty,hegde-chakraborty@okhdfcbank,SBI,2565824150,SBI000878,Delhi Connaught Place,"H.No. 15, Gala Chowk, Jalandhar 526114",2024-03-10
+MER0124,"Sinha, Chhabra and Choudhary","sinha,chhabraandchoudhary@okhdfcbank",HDFC Bank,1681841831,HDFC000730,Kolkata Park Street,"H.No. 97, Grewal Marg, Surendranagar Dudhrej 581129",2021-06-26
+MER0125,"Goda, Upadhyay and Iyengar","goda,upadhyayandiyengar@okhdfcbank",HDFC Bank,2075421686,HDFC000637,Bangalore MG Road,"H.No. 677, Guha Chowk, Kolhapur-920335",2017-10-14
+MER0126,Vasa Ltd,vasaltd@okhdfcbank,SBI,5935043453,SBI000245,Chennai Anna Salai,"44, Mallick Ganj, Karawal Nagar 226564",2019-09-11
+MER0127,"Raj, Dave and Sagar","raj,daveandsagar@okhdfcbank",Axis Bank,1798950117,AXIS000519,Bangalore MG Road,"24/32, Dugar Chowk, Nagercoil 649468",2016-05-13
+MER0128,"Krishna, Kunda and Vora","krishna,kundaandvora@okhdfcbank",ICICI Bank,3235564720,ICIC000337,Mumbai Main Branch,"H.No. 500, Dewan Path, Bhavnagar 136195",2016-12-09
+MER0129,"Edwin, Uppal and Rajagopalan","edwin,uppalandrajagopalan@okhdfcbank",Kotak Mahindra Bank,9813902271,KOTA000770,Delhi Connaught Place,"66/329, Sahni Circle, Kakinada 549505",2022-10-25
+MER0130,Kuruvilla Ltd,kuruvillaltd@okhdfcbank,Axis Bank,7648345452,AXIS000533,Delhi Connaught Place,"H.No. 870, Bava Road, Medininagar-678173",2018-05-19
+MER0131,"Devi, Kulkarni and Devan","devi,kulkarnianddevan@okhdfcbank",ICICI Bank,5128933049,ICIC000717,Mumbai Main Branch,"H.No. 73, Shanker Ganj, Adoni-273550",2025-02-01
+MER0132,Bumb-Kota,bumb-kota@okhdfcbank,HDFC Bank,4319306719,HDFC000375,Delhi Connaught Place,"61/331, Rau Road, Ambattur-421851",2020-09-13
+MER0133,Kakar-Jaggi,kakar-jaggi@okhdfcbank,Kotak Mahindra Bank,8562837321,KOTA000840,Delhi Connaught Place,"52/59, Upadhyay Street, Kumbakonam 059237",2025-03-16
+MER0134,"Bera, Chokshi and Tata","bera,chokshiandtata@okhdfcbank",ICICI Bank,1802328719,ICIC000905,Mumbai Main Branch,"52, Gill, Anantapuram-567270",2019-04-09
+MER0135,Krishnan-Seshadri,krishnan-seshadri@okhdfcbank,Axis Bank,4673946519,AXIS000884,Bangalore MG Road,"H.No. 827, Shetty Nagar, Malda-283561",2017-05-28
+MER0136,Das-Kumer,das-kumer@okhdfcbank,Kotak Mahindra Bank,4493121673,KOTA000612,Kolkata Park Street,"H.No. 200, Sachar Path, Gwalior 186970",2021-07-10
+MER0137,"Srinivas, Bir and Atwal","srinivas,birandatwal@okhdfcbank",HDFC Bank,2691382520,HDFC000271,Mumbai Main Branch,"33/091, Kohli Marg, Sri Ganganagar-969727",2017-08-10
+MER0138,"Din, Choudhary and Joshi","din,choudharyandjoshi@okhdfcbank",SBI,1568185470,SBI000982,Kolkata Park Street,"27/937, Sarma Street, Baranagar-488879",2021-06-29
+MER0139,"Sarma, Verma and Sandal","sarma,vermaandsandal@okhdfcbank",Axis Bank,6494453109,AXIS000351,Chennai Anna Salai,"17/980, Hayre Circle, Tezpur-903736",2024-03-24
+MER0140,"Kamdar, Kale and Sachdeva","kamdar,kaleandsachdeva@okhdfcbank",ICICI Bank,4050325243,ICIC000830,Delhi Connaught Place,"60/21, Bhagat Chowk, Phusro 692803",2017-05-06
+MER0141,Sanghvi-Borah,sanghvi-borah@okhdfcbank,ICICI Bank,4240611325,ICIC000168,Chennai Anna Salai,"268, Kala Marg, Mumbai-218875",2018-10-18
+MER0142,Tara-Devi,tara-devi@okhdfcbank,ICICI Bank,5297429997,ICIC000571,Kolkata Park Street,"24, Chand Circle, Khora  193540",2025-07-02
+MER0143,Madan-Madan,madan-madan@okhdfcbank,SBI,7550043232,SBI000762,Kolkata Park Street,"54/17, Vala Road, Bongaigaon-062055",2018-05-08
+MER0144,"Singhal, Sur and Taneja","singhal,surandtaneja@okhdfcbank",Axis Bank,9318793788,AXIS000270,Kolkata Park Street,"H.No. 25, Batra Path, Vijayanagaram 999970",2024-08-08
+MER0145,Contractor LLC,contractorllc@okhdfcbank,SBI,1156408439,SBI000175,Kolkata Park Street,"03/460, Kibe Zila, Jamnagar 583772",2020-04-02
+MER0146,"Majumdar, Ramakrishnan and Sathe","majumdar,ramakrishnanandsathe@okhdfcbank",Axis Bank,8911097892,AXIS000218,Kolkata Park Street,"H.No. 037, Sem Street, Chandrapur-901555",2018-05-17
+MER0147,Datta-Setty,datta-setty@okhdfcbank,SBI,6938102736,SBI000406,Bangalore MG Road,"H.No. 074, Dua Road, Kumbakonam-642955",2018-01-09
+MER0148,Contractor-Kanda,contractor-kanda@okhdfcbank,HDFC Bank,6645928545,HDFC000303,Mumbai Main Branch,"H.No. 81, Mann Chowk, Tiruchirappalli 673441",2025-10-22
+MER0149,"Kalita, Chakrabarti and Viswanathan","kalita,chakrabartiandviswanathan@okhdfcbank",ICICI Bank,5927058358,ICIC000985,Kolkata Park Street,"29/219, Kohli Path, Karimnagar-268922",2022-09-09
+MER0150,"Ganesh, Tripathi and Raman","ganesh,tripathiandraman@okhdfcbank",ICICI Bank,6591927761,ICIC000350,Delhi Connaught Place,"H.No. 283, Jani Road, Ratlam 787686",2020-02-04
+MER0151,Chad-Swaminathan,chad-swaminathan@okhdfcbank,HDFC Bank,4867633413,HDFC000549,Bangalore MG Road,"72/33, Gopal Road, Eluru 126538",2025-02-22
+MER0152,"Dave, Jaggi and Soman","dave,jaggiandsoman@okhdfcbank",SBI,7009686555,SBI000829,Chennai Anna Salai,"H.No. 53, Ram Circle, Dibrugarh-562295",2017-03-17
+MER0153,"Roy, Agarwal and Venkatesh","roy,agarwalandvenkatesh@okhdfcbank",Axis Bank,4789808025,AXIS000574,Delhi Connaught Place,"H.No. 603, Garg Road, Muzaffarpur-177312",2017-10-23
+MER0154,Karan LLC,karanllc@okhdfcbank,SBI,5121529498,SBI000351,Delhi Connaught Place,"H.No. 272, Sengupta Nagar, Naihati 460710",2023-02-11
+MER0155,Bumb and Sons,bumbandsons@okhdfcbank,HDFC Bank,6563778312,HDFC000154,Bangalore MG Road,"32/26, Randhawa Zila, Surat-772512",2024-04-11
+MER0156,Virk-Srinivas,virk-srinivas@okhdfcbank,SBI,9200776330,SBI000769,Chennai Anna Salai,"24, Shenoy Path, Munger 872714",2026-01-23
+MER0157,Sankaran and Sons,sankaranandsons@okhdfcbank,HDFC Bank,7864373348,HDFC000463,Kolkata Park Street,"27/939, Deo Chowk, Tadepalligudem-156544",2019-08-04
+MER0158,Din-Gera,din-gera@okhdfcbank,Kotak Mahindra Bank,3049163708,KOTA000989,Chennai Anna Salai,"098, Mahajan Marg, Satara-160763",2020-04-30
+MER0159,Korpal-Kade,korpal-kade@okhdfcbank,HDFC Bank,6808867808,HDFC000298,Bangalore MG Road,"64/243, Bawa Street, Tinsukia-513878",2020-06-27
+MER0160,Cherian Inc,cherianinc@okhdfcbank,Kotak Mahindra Bank,1712730078,KOTA000203,Delhi Connaught Place,"42/58, Ganesan Path, Siliguri 625375",2024-05-27
+MER0161,"Kunda, Solanki and Contractor","kunda,solankiandcontractor@okhdfcbank",Kotak Mahindra Bank,2157960161,KOTA000125,Kolkata Park Street,"83/349, Dara Circle, Bhavnagar 595377",2017-08-07
+MER0162,"Madan, Chaudry and Mannan","madan,chaudryandmannan@okhdfcbank",ICICI Bank,2594577205,ICIC000559,Chennai Anna Salai,"94/11, Chopra, Panihati-072837",2022-07-01
+MER0163,Yadav-Halder,yadav-halder@okhdfcbank,Axis Bank,7271901973,AXIS000736,Bangalore MG Road,"H.No. 961, Dey Nagar, Muzaffarpur-797594",2025-09-13
+MER0164,"Lad, Sampath and Hora","lad,sampathandhora@okhdfcbank",Axis Bank,2580408536,AXIS000920,Kolkata Park Street,"168, Sagar Path, Ambattur-887281",2022-02-11
+MER0165,Sahni Group,sahnigroup@okhdfcbank,Kotak Mahindra Bank,7388836126,KOTA000881,Kolkata Park Street,"37/64, Divan Zila, Ahmednagar-264278",2017-04-16
+MER0166,"Gola, Venkataraman and Kohli","gola,venkataramanandkohli@okhdfcbank",HDFC Bank,3173028996,HDFC000257,Chennai Anna Salai,"H.No. 341, Dave, Thiruvananthapuram-872147",2022-08-03
+MER0167,Bath and Sons,bathandsons@okhdfcbank,Axis Bank,2147210900,AXIS000245,Delhi Connaught Place,"H.No. 60, Trivedi Zila, Haridwar-400839",2017-02-13
+MER0168,Sunder Group,sundergroup@okhdfcbank,HDFC Bank,7944422475,HDFC000382,Chennai Anna Salai,"69/57, Bakshi Marg, Mahbubnagar-074452",2016-04-22
+MER0169,"Lad, Madan and Srinivasan","lad,madanandsrinivasan@okhdfcbank",ICICI Bank,1179923279,ICIC000410,Mumbai Main Branch,"H.No. 72, Dey Street, Firozabad-928614",2021-01-09
+MER0170,Dass and Sons,dassandsons@okhdfcbank,ICICI Bank,6130310284,ICIC000682,Delhi Connaught Place,"75, Seth Ganj, Raebareli-842718",2022-10-08
+MER0171,Sem-Deo,sem-deo@okhdfcbank,SBI,4793171654,SBI000537,Kolkata Park Street,"H.No. 027, Doctor Nagar, Korba 491187",2016-10-16
+MER0172,"Kade, Roy and Kakar","kade,royandkakar@okhdfcbank",Kotak Mahindra Bank,4934496107,KOTA000100,Mumbai Main Branch,"80, Raval Road, Nanded 906596",2023-04-14
+MER0173,"Divan, Dugar and Sridhar","divan,dugarandsridhar@okhdfcbank",ICICI Bank,4688692541,ICIC000371,Chennai Anna Salai,"90/36, Sangha Circle, Ozhukarai 925425",2019-08-16
+MER0174,"Kala, Badami and Swamy","kala,badamiandswamy@okhdfcbank",HDFC Bank,6235970805,HDFC000269,Chennai Anna Salai,"H.No. 865, Kota Circle, Sasaram 288083",2016-06-13
+MER0175,"Brar, Bala and Kant","brar,balaandkant@okhdfcbank",HDFC Bank,9933401102,HDFC000570,Bangalore MG Road,"889, Bail Chowk, Avadi-884319",2025-07-15
+MER0176,Bail LLC,bailllc@okhdfcbank,Kotak Mahindra Bank,9403205543,KOTA000690,Kolkata Park Street,"77/569, Ratti Path, Alappuzha 810084",2018-12-14
+MER0177,"Varghese, Issac and Subramanian","varghese,issacandsubramanian@okhdfcbank",Kotak Mahindra Bank,8150869292,KOTA000639,Delhi Connaught Place,"13, Kumer Zila, Alappuzha-627715",2023-06-12
+MER0178,Jhaveri and Sons,jhaveriandsons@okhdfcbank,Kotak Mahindra Bank,4850825248,KOTA000331,Mumbai Main Branch,"64/013, Gera Ganj, Baranagar-199652",2023-09-24
+MER0179,Soman-Uppal,soman-uppal@okhdfcbank,SBI,7371137170,SBI000436,Kolkata Park Street,"95/563, Bal Zila, Shimla-256414",2020-08-07
+MER0180,"Agate, Bains and Das","agate,bainsanddas@okhdfcbank",Axis Bank,2738212308,AXIS000705,Bangalore MG Road,"62, Sankar Zila, Rourkela 102550",2026-01-22
+MER0181,Basak-Iyer,basak-iyer@okhdfcbank,Axis Bank,4365005756,AXIS000354,Chennai Anna Salai,"H.No. 144, Dani Nagar, Bhiwani-049117",2016-12-16
+MER0182,"Chandran, Ratti and Toor","chandran,rattiandtoor@okhdfcbank",ICICI Bank,4977361488,ICIC000814,Kolkata Park Street,"H.No. 222, Khanna Nagar, Kakinada 341201",2026-02-12
+MER0183,Mann LLC,mannllc@okhdfcbank,Kotak Mahindra Bank,6854009954,KOTA000860,Chennai Anna Salai,"H.No. 79, Brar Path, Tiruvottiyur 300017",2017-05-19
+MER0184,"Rajagopal, Karnik and Vora","rajagopal,karnikandvora@okhdfcbank",SBI,7728379247,SBI000406,Mumbai Main Branch,"67/990, Iyer Nagar, Bhiwandi-240511",2022-12-18
+MER0185,Hans Inc,hansinc@okhdfcbank,ICICI Bank,4819542354,ICIC000546,Chennai Anna Salai,"H.No. 86, Chandran Path, Gwalior-242871",2023-08-21
+MER0186,"Ghosh, Zachariah and Contractor","ghosh,zachariahandcontractor@okhdfcbank",SBI,5956589581,SBI000584,Mumbai Main Branch,"87, Ramanathan Zila, Secunderabad-535278",2021-01-27
+MER0187,Ghosh Inc,ghoshinc@okhdfcbank,Axis Bank,9321902955,AXIS000221,Bangalore MG Road,"581, Anne Path, Bellary 571171",2017-05-21
+MER0188,"Kapadia, Ravi and Bumb","kapadia,raviandbumb@okhdfcbank",ICICI Bank,9580479302,ICIC000505,Kolkata Park Street,"H.No. 178, Sodhi Marg, Solapur-493610",2016-12-12
+MER0189,Bawa PLC,bawaplc@okhdfcbank,ICICI Bank,7035793540,ICIC000969,Delhi Connaught Place,"H.No. 40, Chakraborty Marg, Ramagundam 625155",2021-03-13
+MER0190,"Kapur, Varkey and Khalsa","kapur,varkeyandkhalsa@okhdfcbank",Axis Bank,4455427967,AXIS000444,Delhi Connaught Place,"H.No. 14, Tailor Chowk, Ujjain 784688",2016-08-03
+MER0191,Jani-Bhatia,jani-bhatia@okhdfcbank,Kotak Mahindra Bank,1355959916,KOTA000184,Mumbai Main Branch,"51/008, Gola Chowk, Panipat 974345",2025-07-02
+MER0192,Srinivasan LLC,srinivasanllc@okhdfcbank,HDFC Bank,7135543836,HDFC000194,Delhi Connaught Place,"03/59, Balasubramanian Circle, Satna 855531",2022-06-15
+MER0193,Sarna-Kumar,sarna-kumar@okhdfcbank,HDFC Bank,5303932022,HDFC000281,Mumbai Main Branch,"56/36, Mandal Circle, Indore-799878",2025-04-17
+MER0194,Dani Inc,daniinc@okhdfcbank,ICICI Bank,8918114888,ICIC000795,Bangalore MG Road,"968, Salvi Road, Kadapa 007690",2018-05-07
+MER0195,Gara-Badal,gara-badal@okhdfcbank,Kotak Mahindra Bank,1375896352,KOTA000269,Bangalore MG Road,"32/918, Jain Ganj, Bharatpur-614665",2021-09-20
+MER0196,Varkey-Dani,varkey-dani@okhdfcbank,Axis Bank,1429373521,AXIS000696,Mumbai Main Branch,"H.No. 413, Sahni Zila, Surendranagar Dudhrej 440249",2019-04-04
+MER0197,"Devi, Swamy and Devi","devi,swamyanddevi@okhdfcbank",HDFC Bank,3638670490,HDFC000941,Delhi Connaught Place,"91, Bahri Chowk, Ajmer-071914",2024-08-03
+MER0198,Kibe-Bansal,kibe-bansal@okhdfcbank,ICICI Bank,9147794062,ICIC000943,Chennai Anna Salai,"78, Vohra Path, Saharanpur 760166",2024-01-23
+MER0199,"Sha, Bala and Madan","sha,balaandmadan@okhdfcbank",HDFC Bank,7926652524,HDFC000241,Mumbai Main Branch,"07/885, Ben Circle, Raurkela Industrial Township 419336",2023-04-23
+MER0200,"Varty, Bail and Sathe","varty,bailandsathe@okhdfcbank",SBI,2116615149,SBI000758,Kolkata Park Street,"H.No. 108, Sundaram Nagar, Nanded 199277",2021-08-15
+MER0201,"Das, Bhat and Gera","das,bhatandgera@okhdfcbank",HDFC Bank,2218469455,HDFC000502,Bangalore MG Road,"H.No. 094, Vyas Ganj, Vijayanagaram-474455",2023-05-14
+MER0202,Bakshi-Kota,bakshi-kota@okhdfcbank,ICICI Bank,8279577736,ICIC000929,Chennai Anna Salai,"74, Barad Circle, Chinsurah 595362",2022-03-19
+MER0203,Kothari-Toor,kothari-toor@okhdfcbank,Axis Bank,6610939962,AXIS000769,Chennai Anna Salai,"H.No. 633, Thakur Road, Arrah 925881",2020-08-25
+MER0204,Kanda Inc,kandainc@okhdfcbank,SBI,2402777787,SBI000346,Chennai Anna Salai,"70/61, Dugal Path, Satara 584164",2019-01-06
+MER0205,Wadhwa-Sawhney,wadhwa-sawhney@okhdfcbank,ICICI Bank,4020369682,ICIC000137,Mumbai Main Branch,"57/50, Krishna Chowk, Burhanpur 538756",2025-08-02
+MER0206,Devi-Gara,devi-gara@okhdfcbank,HDFC Bank,1505595570,HDFC000210,Chennai Anna Salai,"03/19, Sengupta Nagar, Unnao 736038",2020-01-26
+MER0207,Hayre Ltd,hayreltd@okhdfcbank,ICICI Bank,5610398955,ICIC000888,Bangalore MG Road,"83/159, Kara Chowk, Junagadh 035546",2022-02-19
+MER0208,Lala-Toor,lala-toor@okhdfcbank,Axis Bank,3487947015,AXIS000835,Chennai Anna Salai,"72/83, Dash Nagar, Bardhaman 454551",2019-01-21
+MER0209,Toor-Anand,toor-anand@okhdfcbank,SBI,2760423639,SBI000759,Kolkata Park Street,"H.No. 70, Jain Circle, Durg 462121",2025-05-23
+MER0210,"Thakur, Bali and Sidhu","thakur,baliandsidhu@okhdfcbank",Kotak Mahindra Bank,4045607582,KOTA000584,Mumbai Main Branch,"27/88, Kumar Chowk, Vadodara 658295",2024-10-08
+MER0211,Swaminathan-Din,swaminathan-din@okhdfcbank,Axis Bank,5967262652,AXIS000296,Bangalore MG Road,"58/04, Rajagopal Circle, Indore-676281",2022-03-05
+MER0212,Dewan-Batta,dewan-batta@okhdfcbank,HDFC Bank,1210076241,HDFC000961,Bangalore MG Road,"H.No. 31, Roy Ganj, Lucknow 976454",2019-02-15
+MER0213,Som-Garg,som-garg@okhdfcbank,SBI,7432215734,SBI000774,Chennai Anna Salai,"07/87, Doctor Nagar, Hospet-485089",2026-01-27
+MER0214,Wadhwa-Mann,wadhwa-mann@okhdfcbank,Axis Bank,2931069888,AXIS000935,Bangalore MG Road,"464, Varma Chowk, Hosur 051152",2021-01-28
+MER0215,Hora-Sama,hora-sama@okhdfcbank,SBI,8122794462,SBI000869,Kolkata Park Street,"97/278, Majumdar Road, Tiruchirappalli 004806",2017-03-13
+MER0216,Baral Inc,baralinc@okhdfcbank,ICICI Bank,4363847086,ICIC000356,Chennai Anna Salai,"H.No. 635, Chakraborty Path, Guntur-265327",2018-04-04
+MER0217,Kulkarni-Dhar,kulkarni-dhar@okhdfcbank,HDFC Bank,9539979154,HDFC000251,Mumbai Main Branch,"H.No. 788, Sampath Street, Sri Ganganagar-080357",2023-01-15
+MER0218,Shenoy PLC,shenoyplc@okhdfcbank,ICICI Bank,7888791835,ICIC000384,Delhi Connaught Place,"56, Bala Zila, Gudivada 808551",2023-03-24
+MER0219,Venkataraman-Lall,venkataraman-lall@okhdfcbank,ICICI Bank,2794738827,ICIC000889,Mumbai Main Branch,"H.No. 802, Dutt, Agra 865166",2021-04-13
+MER0220,"Bahl, Basak and Sethi","bahl,basakandsethi@okhdfcbank",Axis Bank,8350257640,AXIS000919,Kolkata Park Street,"H.No. 37, Chaudhari Marg, Allahabad 853621",2019-01-01
+MER0221,Rout LLC,routllc@okhdfcbank,Axis Bank,2448176310,AXIS000207,Chennai Anna Salai,"H.No. 830, Dar Circle, Nashik 341076",2018-07-22
+MER0222,"Deshpande, Gole and Samra","deshpande,goleandsamra@okhdfcbank",Kotak Mahindra Bank,1866351732,KOTA000251,Bangalore MG Road,"H.No. 43, Sekhon Zila, Rewa-527117",2024-08-16
+MER0223,"Sahota, Hans and Shenoy","sahota,hansandshenoy@okhdfcbank",Kotak Mahindra Bank,6139619911,KOTA000888,Mumbai Main Branch,"338, Sarkar Circle, Bhimavaram-744418",2019-10-17
+MER0224,"Johal, Dara and Kohli","johal,daraandkohli@okhdfcbank",SBI,2960379288,SBI000391,Bangalore MG Road,"85/77, Hora Chowk, Kavali-617189",2024-11-27
+MER0225,Luthra-Shetty,luthra-shetty@okhdfcbank,HDFC Bank,4400919539,HDFC000585,Chennai Anna Salai,"52/86, Bali Ganj, Hajipur 339605",2017-02-23
+MER0226,"Tank, Sahota and Brahmbhatt","tank,sahotaandbrahmbhatt@okhdfcbank",SBI,3537868976,SBI000560,Bangalore MG Road,"811, Loyal Ganj, Bangalore-897744",2025-01-26
+MER0227,Kulkarni-Grover,kulkarni-grover@okhdfcbank,Axis Bank,4660019631,AXIS000936,Delhi Connaught Place,"13/60, Deshmukh Circle, Vijayanagaram 815945",2021-08-18
+MER0228,Korpal Group,korpalgroup@okhdfcbank,Kotak Mahindra Bank,6386498527,KOTA000371,Mumbai Main Branch,"81/857, Dixit Path, Thanjavur 958922",2016-06-09
+MER0229,Roy Group,roygroup@okhdfcbank,Kotak Mahindra Bank,1984496053,KOTA000327,Chennai Anna Salai,"14, Samra Circle, Karnal 186886",2021-11-24
+MER0230,"Kata, Dutta and Talwar","kata,duttaandtalwar@okhdfcbank",ICICI Bank,2705016899,ICIC000540,Mumbai Main Branch,"H.No. 63, Dhawan Circle, Nadiad-558380",2018-09-06
+MER0231,Chakraborty-Sankar,chakraborty-sankar@okhdfcbank,HDFC Bank,2789949373,HDFC000613,Bangalore MG Road,"H.No. 52, Mandal Path, Tirupati-415257",2016-05-04
+MER0232,Sharma-Talwar,sharma-talwar@okhdfcbank,Kotak Mahindra Bank,3848912787,KOTA000608,Kolkata Park Street,"78, Dutta, Fatehpur 655555",2018-01-24
+MER0233,Kala-Rajagopal,kala-rajagopal@okhdfcbank,ICICI Bank,7667332249,ICIC000898,Mumbai Main Branch,"H.No. 304, Kannan, Ahmedabad-206251",2021-03-13
+MER0234,"Sarkar, Arya and Rama","sarkar,aryaandrama@okhdfcbank",ICICI Bank,8411916248,ICIC000281,Kolkata Park Street,"44/963, Subramanian Nagar, Gulbarga 984435",2021-09-28
+MER0235,"Jhaveri, Behl and Kannan","jhaveri,behlandkannan@okhdfcbank",ICICI Bank,9650971885,ICIC000539,Mumbai Main Branch,"05/57, Amble Path, Dindigul-649678",2021-06-22
+MER0236,Som-Sinha,som-sinha@okhdfcbank,Axis Bank,3778169444,AXIS000591,Mumbai Main Branch,"15/165, Sandal Circle, Kollam 851311",2019-01-30
+MER0237,Thaman-Chowdhury,thaman-chowdhury@okhdfcbank,HDFC Bank,2108931441,HDFC000773,Bangalore MG Road,"31/241, Boase Ganj, Jalgaon-237366",2020-03-22
+MER0238,Dua-Iyer,dua-iyer@okhdfcbank,Axis Bank,2784883819,AXIS000536,Delhi Connaught Place,"89/48, Chaudry Nagar, Morena-672351",2017-04-12
+MER0239,Yogi-Banerjee,yogi-banerjee@okhdfcbank,ICICI Bank,2552328441,ICIC000883,Bangalore MG Road,"32/52, Gaba Road, Aizawl-319974",2019-09-11
+MER0240,Date-Chaudhuri,date-chaudhuri@okhdfcbank,Axis Bank,3744581207,AXIS000178,Delhi Connaught Place,"84, Mann Path, Tezpur 297626",2021-12-20
+MER0241,"Chopra, Sur and Bhardwaj","chopra,surandbhardwaj@okhdfcbank",HDFC Bank,2028865518,HDFC000897,Bangalore MG Road,"393, Handa Path, Lucknow-720686",2016-06-11
+MER0242,"Handa, Biswas and Mangat","handa,biswasandmangat@okhdfcbank",ICICI Bank,7233249942,ICIC000224,Kolkata Park Street,"73, Goel Chowk, Bokaro 912092",2017-06-06
+MER0243,"Bhatia, Sant and Bora","bhatia,santandbora@okhdfcbank",Kotak Mahindra Bank,5819372113,KOTA000784,Kolkata Park Street,"81, Savant Ganj, Bhalswa Jahangir Pur 963823",2020-09-28
+MER0244,Bandi-Bera,bandi-bera@okhdfcbank,Axis Bank,4373683942,AXIS000464,Mumbai Main Branch,"73/084, Badal Zila, Satara-301861",2020-09-25
+MER0245,"Bala, Das and Rege","bala,dasandrege@okhdfcbank",Axis Bank,6052593258,AXIS000925,Delhi Connaught Place,"44, Suresh Zila, Rampur 575958",2021-10-02
+MER0246,"Lad, Sinha and Bains","lad,sinhaandbains@okhdfcbank",Kotak Mahindra Bank,9353456768,KOTA000842,Mumbai Main Branch,"048, Lad Circle, Siliguri-398521",2024-10-27
+MER0247,Talwar Ltd,talwarltd@okhdfcbank,Kotak Mahindra Bank,1272442575,KOTA000249,Bangalore MG Road,"H.No. 61, Thakkar Marg, Lucknow-789531",2022-12-29
+MER0248,Chander PLC,chanderplc@okhdfcbank,ICICI Bank,6128922991,ICIC000875,Bangalore MG Road,"H.No. 206, Vala Zila, Agra-639343",2016-05-18
+MER0249,Zacharia-Ramaswamy,zacharia-ramaswamy@okhdfcbank,HDFC Bank,8545210932,HDFC000206,Kolkata Park Street,"62/83, Ahuja Circle, Bhind 528622",2022-01-12
+MER0250,"Lalla, Sane and Mannan","lalla,saneandmannan@okhdfcbank",SBI,1912079195,SBI000294,Kolkata Park Street,"735, Dayal Nagar, Nanded-238606",2021-05-02
+MER0251,Kapadia LLC,kapadiallc@okhdfcbank,SBI,8605695669,SBI000496,Bangalore MG Road,"H.No. 93, Saraf Street, Guwahati 563489",2025-05-11
+MER0252,"Chawla, Handa and Baria","chawla,handaandbaria@okhdfcbank",Axis Bank,1180236719,AXIS000563,Delhi Connaught Place,"32, Dara, Kollam 648791",2018-03-28
+MER0253,Tata PLC,tataplc@okhdfcbank,HDFC Bank,7747132913,HDFC000117,Bangalore MG Road,"21/557, Handa Circle, Kurnool 388408",2025-08-01
+MER0254,"Sinha, Bhandari and Koshy","sinha,bhandariandkoshy@okhdfcbank",Axis Bank,4597117220,AXIS000422,Chennai Anna Salai,"185, Seth Zila, Haldia-184059",2017-09-30
+MER0255,"Wali, Doctor and Varughese","wali,doctorandvarughese@okhdfcbank",HDFC Bank,4290482477,HDFC000707,Delhi Connaught Place,"86/42, Bali Zila, Hubli–Dharwad-753217",2022-04-10
+MER0256,"Vasa, Luthra and Ramaswamy","vasa,luthraandramaswamy@okhdfcbank",SBI,2463309671,SBI000739,Mumbai Main Branch,"H.No. 11, Dua Road, Jodhpur 874847",2024-05-31
+MER0257,"Sheth, Apte and Atwal","sheth,apteandatwal@okhdfcbank",Axis Bank,6351690646,AXIS000649,Chennai Anna Salai,"424, Chandran Path, Tiruvottiyur 635775",2025-06-14
+MER0258,Arora-Keer,arora-keer@okhdfcbank,Axis Bank,1457732911,AXIS000407,Delhi Connaught Place,"09, Das Nagar, Pondicherry 149878",2022-06-20
+MER0259,"Sood, Som and Vyas","sood,somandvyas@okhdfcbank",Axis Bank,8798343554,AXIS000256,Bangalore MG Road,"77, Bains, Raipur 742601",2016-11-18
+MER0260,Dani-Roy,dani-roy@okhdfcbank,Axis Bank,8944559914,AXIS000176,Kolkata Park Street,"17/95, Kala Chowk, Fatehpur-830948",2021-11-14
+MER0261,Ahuja-Basu,ahuja-basu@okhdfcbank,Axis Bank,5617569424,AXIS000415,Bangalore MG Road,"099, Tandon Marg, Nizamabad-667848",2019-01-25
+MER0262,Saini-Balasubramanian,saini-balasubramanian@okhdfcbank,SBI,1097634221,SBI000391,Bangalore MG Road,"H.No. 48, Kaur Circle, Berhampore 007226",2023-05-31
+MER0263,Shere LLC,sherellc@okhdfcbank,ICICI Bank,4057159068,ICIC000990,Delhi Connaught Place,"73/811, Kant Chowk, Alwar-324482",2020-07-16
+MER0264,"Ghose, Kant and Bora","ghose,kantandbora@okhdfcbank",Kotak Mahindra Bank,4657464840,KOTA000471,Mumbai Main Branch,"H.No. 845, Chopra Circle, Narasaraopet 971173",2024-10-12
+MER0265,Tripathi-Toor,tripathi-toor@okhdfcbank,HDFC Bank,9481010313,HDFC000886,Bangalore MG Road,"15/18, Chana Ganj, Surendranagar Dudhrej-993304",2023-10-21
+MER0266,Devi PLC,deviplc@okhdfcbank,Axis Bank,4815684991,AXIS000287,Kolkata Park Street,"H.No. 711, Dhingra Marg, Loni 771773",2018-09-19
+MER0267,Saxena PLC,saxenaplc@okhdfcbank,ICICI Bank,1338610352,ICIC000150,Bangalore MG Road,"73/16, Chhabra Road, Jamshedpur-718724",2019-11-17
+MER0268,Krish and Sons,krishandsons@okhdfcbank,Axis Bank,4690461734,AXIS000931,Kolkata Park Street,"80/874, Barad Nagar, Jodhpur 536791",2026-01-06
+MER0269,Buch-Rattan,buch-rattan@okhdfcbank,Kotak Mahindra Bank,7640296994,KOTA000665,Bangalore MG Road,"26, Dutt Circle, Kakinada 053288",2017-03-11
+MER0270,"Dasgupta, Madan and Dhar","dasgupta,madananddhar@okhdfcbank",HDFC Bank,9140362371,HDFC000870,Mumbai Main Branch,"176, Agate Chowk, Davanagere-796707",2018-04-01
+MER0271,"Dayal, Sarin and Kohli","dayal,sarinandkohli@okhdfcbank",Axis Bank,2804621381,AXIS000773,Bangalore MG Road,"62/08, Joshi Road, Akola 107250",2024-05-19
+MER0272,Rao-Dhillon,rao-dhillon@okhdfcbank,Axis Bank,4182975895,AXIS000240,Mumbai Main Branch,"96/073, Date, Kalyan-Dombivli 152495",2019-05-02
+MER0273,Trivedi Group,trivedigroup@okhdfcbank,HDFC Bank,3526747565,HDFC000209,Chennai Anna Salai,"40, Baria Zila, Katihar 092198",2020-12-12
+MER0274,Dash and Sons,dashandsons@okhdfcbank,HDFC Bank,6846001098,HDFC000654,Mumbai Main Branch,"H.No. 495, Kumar, Naihati-830187",2021-12-31
+MER0275,"Sarraf, Borah and Garde","sarraf,borahandgarde@okhdfcbank",Axis Bank,2063329832,AXIS000442,Delhi Connaught Place,"44, Wali Nagar, Surendranagar Dudhrej-433906",2020-08-05
+MER0276,"Varkey, Acharya and Manda","varkey,acharyaandmanda@okhdfcbank",ICICI Bank,4722414631,ICIC000745,Mumbai Main Branch,"99/761, Shroff Marg, Tirunelveli-022828",2020-09-20
+MER0277,Karnik Ltd,karnikltd@okhdfcbank,SBI,4041530477,SBI000273,Kolkata Park Street,"96/34, Kata Path, Phagwara-580244",2025-11-08
+MER0278,"Kar, Ganesh and Balay","kar,ganeshandbalay@okhdfcbank",ICICI Bank,9545468157,ICIC000105,Kolkata Park Street,"54, Sahni Path, Durgapur-333994",2019-02-09
+MER0279,Thakkar PLC,thakkarplc@okhdfcbank,Axis Bank,4615676071,AXIS000604,Kolkata Park Street,"584, Tak Chowk, Rajpur Sonarpur 517310",2018-03-23
+MER0280,Goda and Sons,godaandsons@okhdfcbank,ICICI Bank,5549966649,ICIC000316,Kolkata Park Street,"76/61, Kar Path, Mau 623780",2021-11-24
+MER0281,"Shankar, Karan and Chandran","shankar,karanandchandran@okhdfcbank",SBI,7561770072,SBI000452,Delhi Connaught Place,"83, Krishna, Shahjahanpur 139293",2019-04-04
+MER0282,"Raja, Ramakrishnan and Kadakia","raja,ramakrishnanandkadakia@okhdfcbank",SBI,7778883020,SBI000375,Delhi Connaught Place,"767, Samra Nagar, Phusro 412213",2021-04-21
+MER0283,"Dave, Batta and Bali","dave,battaandbali@okhdfcbank",Kotak Mahindra Bank,7099816416,KOTA000763,Kolkata Park Street,"H.No. 97, Thaker Zila, Karnal-235686",2018-12-18
+MER0284,Barad and Sons,baradandsons@okhdfcbank,SBI,5787216589,SBI000704,Delhi Connaught Place,"54/251, Rana Marg, Akola 426408",2024-12-03
+MER0285,"Kamdar, Bir and Mahal","kamdar,birandmahal@okhdfcbank",Axis Bank,3969110738,AXIS000690,Delhi Connaught Place,"505, Kunda Zila, Aizawl 246507",2022-11-06
+MER0286,Khalsa-Sampath,khalsa-sampath@okhdfcbank,Kotak Mahindra Bank,3882025167,KOTA000235,Mumbai Main Branch,"16/91, Thaker Marg, Faridabad-024387",2022-10-14
+MER0287,Tripathi Group,tripathigroup@okhdfcbank,ICICI Bank,5287000043,ICIC000862,Mumbai Main Branch,"74/76, Manne, Shivpuri-152591",2025-09-24
+MER0288,Maharaj LLC,maharajllc@okhdfcbank,HDFC Bank,8233017721,HDFC000236,Delhi Connaught Place,"02/76, Sangha Nagar, Mathura 409750",2019-08-14
+MER0289,"Choudhary, Kashyap and Rajagopalan","choudhary,kashyapandrajagopalan@okhdfcbank",Axis Bank,5120590842,AXIS000688,Mumbai Main Branch,"545, Badami Marg, Vadodara-451442",2020-03-23
+MER0290,Borah-Vyas,borah-vyas@okhdfcbank,ICICI Bank,4080507337,ICIC000949,Mumbai Main Branch,"62/101, Keer Circle, Chennai-186105",2022-05-27
+MER0291,Lalla-Malhotra,lalla-malhotra@okhdfcbank,SBI,5754329742,SBI000311,Chennai Anna Salai,"86/96, Virk Ganj, Mysore 141957",2020-11-11
+MER0292,"Rout, Sant and Khare","rout,santandkhare@okhdfcbank",ICICI Bank,6878765818,ICIC000520,Chennai Anna Salai,"24/05, Chahal Ganj, Karaikudi 609267",2017-06-22
+MER0293,"Shere, Bhalla and Gole","shere,bhallaandgole@okhdfcbank",Kotak Mahindra Bank,8216895937,KOTA000554,Delhi Connaught Place,"30/79, Hari Circle, Guna-697858",2024-06-12
+MER0294,Deol LLC,deolllc@okhdfcbank,ICICI Bank,6183086934,ICIC000461,Delhi Connaught Place,"53/29, Sarna, Kolhapur-433040",2019-11-08
+MER0295,"Devan, Kumar and Chauhan","devan,kumarandchauhan@okhdfcbank",ICICI Bank,7399129028,ICIC000380,Chennai Anna Salai,"20/45, Banik Road, Khammam-986411",2021-12-18
+MER0296,"Bhat, Choudhury and Joshi","bhat,choudhuryandjoshi@okhdfcbank",HDFC Bank,2082809647,HDFC000543,Chennai Anna Salai,"72, Walla Circle, Tiruchirappalli 352758",2020-04-04
+MER0297,Walia-Kaur,walia-kaur@okhdfcbank,ICICI Bank,9845881653,ICIC000569,Kolkata Park Street,"29/019, Gara Ganj, Secunderabad-678096",2020-08-21
+MER0298,Mandal and Sons,mandalandsons@okhdfcbank,Axis Bank,6170452916,AXIS000213,Bangalore MG Road,"04, Trivedi Ganj, Bareilly-265225",2019-12-23
+MER0299,Doctor-Chaudry,doctor-chaudry@okhdfcbank,ICICI Bank,6512359350,ICIC000281,Chennai Anna Salai,"82/57, Batta, Ongole-022851",2021-05-19
+MER0300,Deep PLC,deepplc@okhdfcbank,HDFC Bank,9870374607,HDFC000565,Bangalore MG Road,"519, Lalla Path, Hapur 470751",2016-12-02

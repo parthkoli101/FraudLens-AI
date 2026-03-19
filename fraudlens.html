@@ -1,0 +1,1861 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FraudLens AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
+    rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg: #F4F6FB;
+      --surface: #FFFFFF;
+      --surface2: #F8FAFD;
+      --border: #E4E9F4;
+      --border2: #CBD5E8;
+      --txt: #0F172A;
+      --txt2: #475569;
+      --txt3: #94A3B8;
+      --indigo: #4F46E5;
+      --indigo2: #6366F1;
+      --indigo-light: #EEF2FF;
+      --indigo-mid: #C7D2FE;
+      --red: #DC2626;
+      --red-light: #FEF2F2;
+      --red-mid: #FECACA;
+      --amber: #D97706;
+      --amber-light: #FFFBEB;
+      --amber-mid: #FDE68A;
+      --blue: #2563EB;
+      --blue-light: #EFF6FF;
+      --blue-mid: #BFDBFE;
+      --green: #059669;
+      --green-light: #ECFDF5;
+      --green-mid: #A7F3D0;
+      --shadow: 0 1px 3px rgba(15, 23, 42, .06), 0 4px 16px rgba(15, 23, 42, .04);
+      --shadow-lg: 0 4px 24px rgba(79, 70, 229, .12), 0 1px 3px rgba(15, 23, 42, .08);
+    }
+
+    html,
+    body {
+      font-family: 'Sora', sans-serif;
+      background: var(--bg);
+      color: var(--txt);
+      min-height: 100vh;
+      font-size: 14px;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 28px;
+      box-shadow: 0 1px 0 var(--border), 0 2px 12px rgba(15, 23, 42, .04);
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+    }
+
+    .nav-brand-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #4F46E5, #7C3AED);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(79, 70, 229, .3);
+      font-size: 17px;
+      flex-shrink: 0;
+    }
+
+    .nav-brand-name {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--indigo);
+      letter-spacing: -.3px;
+    }
+
+    .nav-pages {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      background: var(--bg);
+      border-radius: 10px;
+      padding: 4px;
+    }
+
+    .nav-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 15px;
+      border-radius: 7px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      background: transparent;
+      color: var(--txt2);
+      transition: all .18s;
+      font-family: 'Sora', sans-serif;
+      white-space: nowrap;
+    }
+
+    .nav-btn:hover {
+      background: var(--surface);
+      color: var(--indigo);
+    }
+
+    .nav-btn.active {
+      background: var(--surface);
+      color: var(--indigo);
+      box-shadow: 0 1px 6px rgba(79, 70, 229, .15);
+    }
+
+    .status-pill {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--green-light);
+      border: 1px solid var(--green-mid);
+      border-radius: 20px;
+      padding: 5px 13px;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--green);
+      letter-spacing: .5px;
+    }
+
+    .status-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--green);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: .5;
+        transform: scale(1.35);
+      }
+    }
+
+    /* PAGES */
+    .page {
+      display: none;
+      padding: 80px 28px 40px;
+      max-width: 1360px;
+      margin: 0 auto;
+      animation: fadeIn .22s ease;
+    }
+
+    .page.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(6px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .ph {
+      margin-bottom: 22px;
+    }
+
+    .ph-title {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--txt);
+      letter-spacing: -.4px;
+    }
+
+    .ph-sub {
+      font-size: 13px;
+      color: var(--txt3);
+      margin-top: 3px;
+    }
+
+    /* KPI */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
+      margin-bottom: 22px;
+    }
+
+    .kpi {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px 20px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+      transition: transform .18s, box-shadow .18s;
+    }
+
+    .kpi:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .kpi::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      border-radius: 14px 14px 0 0;
+    }
+
+    .kpi-indigo::after {
+      background: linear-gradient(90deg, #4F46E5, #7C3AED);
+    }
+
+    .kpi-red::after {
+      background: linear-gradient(90deg, #DC2626, #F97316);
+    }
+
+    .kpi-amber::after {
+      background: linear-gradient(90deg, #D97706, #F59E0B);
+    }
+
+    .kpi-blue::after {
+      background: linear-gradient(90deg, #2563EB, #4F46E5);
+    }
+
+    .kpi-green::after {
+      background: linear-gradient(90deg, #059669, #10B981);
+    }
+
+    .kpi-lbl {
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--txt3);
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      margin-bottom: 7px;
+    }
+
+    .kpi-val {
+      font-size: 28px;
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -.5px;
+    }
+
+    .kpi-indigo .kpi-val {
+      color: var(--indigo);
+    }
+
+    .kpi-red .kpi-val {
+      color: var(--red);
+    }
+
+    .kpi-amber .kpi-val {
+      color: var(--amber);
+    }
+
+    .kpi-blue .kpi-val {
+      color: var(--blue);
+    }
+
+    .kpi-green .kpi-val {
+      color: var(--green);
+    }
+
+    .kpi-hint {
+      font-size: 11px;
+      color: var(--txt3);
+      margin-top: 5px;
+    }
+
+    .kpi-icon {
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 28px;
+      opacity: .1;
+    }
+
+    /* CHARTS */
+    .chart-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 22px;
+    }
+
+    .chart-grid-3 {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 22px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .card-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--txt);
+      margin-bottom: 3px;
+    }
+
+    .card-sub {
+      font-size: 11px;
+      color: var(--txt3);
+      margin-bottom: 16px;
+    }
+
+    .sh {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+    }
+
+    .sh-left {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .sh-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--txt);
+    }
+
+    .sh-badge {
+      background: var(--indigo-light);
+      color: var(--indigo);
+      font-size: 10px;
+      font-weight: 700;
+      padding: 3px 9px;
+      border-radius: 20px;
+      letter-spacing: .5px;
+      text-transform: uppercase;
+    }
+
+    /* RISK BADGES */
+    .rb {
+      display: inline-flex;
+      align-items: center;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .4px;
+      white-space: nowrap;
+    }
+
+    .rb-CRITICAL {
+      background: var(--red-light);
+      color: var(--red);
+      border: 1px solid var(--red-mid);
+    }
+
+    .rb-HIGH {
+      background: var(--amber-light);
+      color: var(--amber);
+      border: 1px solid var(--amber-mid);
+    }
+
+    .rb-MEDIUM {
+      background: var(--blue-light);
+      color: var(--blue);
+      border: 1px solid var(--blue-mid);
+    }
+
+    .rb-LOW {
+      background: var(--green-light);
+      color: var(--green);
+      border: 1px solid var(--green-mid);
+    }
+
+    /* TXN LIST */
+    .txn-list {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .txn-row {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 11px;
+      padding: 13px 16px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      transition: all .18s;
+      cursor: pointer;
+      box-shadow: 0 1px 2px rgba(15, 23, 42, .03);
+    }
+
+    .txn-row:hover {
+      border-color: var(--indigo2);
+      box-shadow: 0 2px 12px rgba(79, 70, 229, .1);
+      transform: translateY(-1px);
+    }
+
+    .txn-score-ring {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 800;
+      font-family: 'JetBrains Mono', monospace;
+      flex-shrink: 0;
+      border: 2px solid;
+    }
+
+    .ring-CRITICAL {
+      background: var(--red-light);
+      color: var(--red);
+      border-color: var(--red);
+    }
+
+    .ring-HIGH {
+      background: var(--amber-light);
+      color: var(--amber);
+      border-color: var(--amber);
+    }
+
+    .ring-MEDIUM {
+      background: var(--blue-light);
+      color: var(--blue);
+      border-color: var(--blue);
+    }
+
+    .ring-LOW {
+      background: var(--green-light);
+      color: var(--green);
+      border-color: var(--green);
+    }
+
+    .txn-main {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .txn-id {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: var(--indigo);
+      font-weight: 600;
+    }
+
+    .txn-name {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--txt);
+      margin-top: 1px;
+    }
+
+    .txn-meta {
+      font-size: 11px;
+      color: var(--txt3);
+      margin-top: 2px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .txn-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 5px;
+    }
+
+    .txn-amount {
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--txt);
+      font-family: 'JetBrains Mono', monospace;
+      letter-spacing: -.5px;
+    }
+
+    .inv-btn {
+      padding: 6px 14px;
+      border-radius: 7px;
+      border: none;
+      cursor: pointer;
+      background: var(--indigo-light);
+      color: var(--indigo);
+      font-size: 11px;
+      font-weight: 700;
+      font-family: 'Sora', sans-serif;
+      transition: all .18s;
+      flex-shrink: 0;
+    }
+
+    .inv-btn:hover {
+      background: var(--indigo);
+      color: #fff;
+      box-shadow: 0 4px 12px rgba(79, 70, 229, .3);
+    }
+
+    /* PAGINATION */
+    .pagination {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .pg-btn {
+      padding: 6px 12px;
+      border-radius: 7px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--txt2);
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: 'Sora', sans-serif;
+      transition: all .15s;
+    }
+
+    .pg-btn:hover,
+    .pg-btn.active {
+      background: var(--indigo);
+      color: #fff;
+      border-color: var(--indigo);
+    }
+
+    .pg-btn:disabled {
+      opacity: .4;
+      cursor: not-allowed;
+    }
+
+    .pg-info {
+      font-size: 12px;
+      color: var(--txt3);
+    }
+
+    /* INVESTIGATION */
+    .icard {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px 20px;
+      box-shadow: var(--shadow);
+      margin-bottom: 14px;
+    }
+
+    .icard-title {
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--txt3);
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .irow {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 7px 0;
+      border-bottom: 1px solid #F8FAFD;
+      font-size: 12px;
+    }
+
+    .irow:last-child {
+      border-bottom: none;
+    }
+
+    .irow-lbl {
+      color: var(--txt3);
+    }
+
+    .irow-val {
+      color: var(--txt);
+      font-weight: 600;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11.5px;
+      text-align: right;
+      max-width: 60%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .irow-val.blue {
+      color: var(--indigo);
+    }
+
+    .irow-val.red {
+      color: var(--red);
+    }
+
+    .irow-val.green {
+      color: var(--green);
+    }
+
+    .score-hero {
+      border-radius: 14px;
+      padding: 24px;
+      text-align: center;
+      color: #fff;
+      box-shadow: 0 8px 32px rgba(79, 70, 229, .35);
+      margin-bottom: 14px;
+    }
+
+    .score-lbl {
+      font-size: 10px;
+      opacity: .75;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .score-num {
+      font-size: 54px;
+      font-weight: 800;
+      font-family: 'JetBrains Mono', monospace;
+      line-height: 1;
+    }
+
+    .score-sub {
+      font-size: 11px;
+      opacity: .65;
+      margin-top: 5px;
+    }
+
+    .pbar-wrap {
+      margin-bottom: 12px;
+    }
+
+    .pbar-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 11px;
+      margin-bottom: 4px;
+    }
+
+    .pbar-label span:first-child {
+      color: var(--txt2);
+      font-weight: 500;
+    }
+
+    .pbar-label span:last-child {
+      font-weight: 700;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .pbar-track {
+      height: 7px;
+      border-radius: 10px;
+      background: var(--border);
+      overflow: hidden;
+    }
+
+    .pbar-fill {
+      height: 100%;
+      border-radius: 10px;
+      transition: width .8s cubic-bezier(.34, 1.56, .64, 1);
+    }
+
+    .flag-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      padding: 9px 12px;
+      border-radius: 8px;
+      margin-bottom: 6px;
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    .flag-danger {
+      background: var(--red-light);
+      border: 1px solid var(--red-mid);
+      color: #991B1B;
+    }
+
+    .flag-ok {
+      background: var(--green-light);
+      border: 1px solid var(--green-mid);
+      color: #065F46;
+    }
+
+    /* AI REPORT */
+    .report-wrap {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+      margin-top: 16px;
+    }
+
+    .report-outcome {
+      border-radius: 11px;
+      padding: 16px 20px;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .outcome-FRAUD_CONFIRMED {
+      background: var(--red-light);
+      border: 2px solid var(--red);
+    }
+
+    .outcome-SUSPICIOUS {
+      background: var(--amber-light);
+      border: 2px solid var(--amber);
+    }
+
+    .outcome-CLEARED {
+      background: var(--green-light);
+      border: 2px solid var(--green);
+    }
+
+    .ro-icon {
+      font-size: 32px;
+    }
+
+    .ro-title {
+      font-size: 17px;
+      font-weight: 800;
+    }
+
+    .outcome-FRAUD_CONFIRMED .ro-title {
+      color: var(--red);
+    }
+
+    .outcome-SUSPICIOUS .ro-title {
+      color: var(--amber);
+    }
+
+    .outcome-CLEARED .ro-title {
+      color: var(--green);
+    }
+
+    .ro-sub {
+      font-size: 12px;
+      color: var(--txt3);
+      margin-top: 2px;
+    }
+
+    .rsection {
+      margin-bottom: 18px;
+    }
+
+    .rsec-title {
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--txt3);
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      margin-bottom: 8px;
+    }
+
+    .rsec-text {
+      font-size: 13px;
+      color: var(--txt2);
+      line-height: 1.75;
+    }
+
+    .rbullet {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      padding: 7px 0;
+      border-bottom: 1px solid var(--bg);
+      font-size: 12px;
+      color: var(--txt2);
+    }
+
+    .rbullet:last-child {
+      border-bottom: none;
+    }
+
+    .rbullet-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--indigo2);
+      margin-top: 5px;
+      flex-shrink: 0;
+    }
+
+    .evidence-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      padding: 7px 12px;
+      background: var(--indigo-light);
+      border: 1px solid var(--indigo-mid);
+      border-radius: 8px;
+      margin-bottom: 6px;
+      font-size: 12px;
+      color: #3730A3;
+    }
+
+    /* DECISIONS */
+    .decision-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .dbtn {
+      padding: 12px 16px;
+      border-radius: 10px;
+      border: 2px solid;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      font-family: 'Sora', sans-serif;
+      transition: all .2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .dbtn-confirm {
+      background: var(--red-light);
+      border-color: var(--red);
+      color: var(--red);
+    }
+
+    .dbtn-confirm:hover {
+      background: var(--red);
+      color: #fff;
+      box-shadow: 0 6px 20px rgba(220, 38, 38, .3);
+    }
+
+    .dbtn-clear {
+      background: var(--green-light);
+      border-color: var(--green);
+      color: var(--green);
+    }
+
+    .dbtn-clear:hover {
+      background: var(--green);
+      color: #fff;
+      box-shadow: 0 6px 20px rgba(5, 150, 105, .3);
+    }
+
+    .dbtn-escalate {
+      background: var(--amber-light);
+      border-color: var(--amber);
+      color: var(--amber);
+    }
+
+    .dbtn-escalate:hover {
+      background: var(--amber);
+      color: #fff;
+      box-shadow: 0 6px 20px rgba(217, 119, 6, .3);
+    }
+
+    /* TOAST */
+    .toast {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 9999;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 20px;
+      box-shadow: 0 8px 32px rgba(15, 23, 42, .15);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--txt);
+      transform: translateY(20px);
+      opacity: 0;
+      transition: all .3s cubic-bezier(.34, 1.56, .64, 1);
+      max-width: 340px;
+    }
+
+    .toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    /* AUDIT */
+    .at-head {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 0.8fr 0.8fr 1fr;
+      gap: 12px;
+      padding: 10px 16px;
+      background: var(--bg);
+      border-radius: 10px 10px 0 0;
+      border: 1px solid var(--border);
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--txt3);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .at-row {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 0.8fr 0.8fr 1fr;
+      gap: 12px;
+      padding: 12px 16px;
+      border: 1px solid var(--border);
+      border-top: none;
+      font-size: 12px;
+      align-items: center;
+      background: var(--surface);
+      transition: background .15s;
+    }
+
+    .at-row:hover {
+      background: var(--surface2);
+    }
+
+    .at-row:last-child {
+      border-radius: 0 0 10px 10px;
+    }
+
+    .dec-CONFIRMED {
+      color: var(--red);
+      font-weight: 700;
+    }
+
+    .dec-CLEARED {
+      color: var(--green);
+      font-weight: 700;
+    }
+
+    .dec-ESCALATED {
+      color: var(--amber);
+      font-weight: 700;
+    }
+
+    /* LIVE FEED */
+    .live-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: var(--red-light);
+      border: 1px solid var(--red-mid);
+      color: var(--red);
+      font-size: 10px;
+      font-weight: 700;
+      padding: 4px 11px;
+      border-radius: 20px;
+      letter-spacing: .8px;
+    }
+
+    .live-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--red);
+      animation: pulse 1s infinite;
+    }
+
+    .live-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 11px;
+      padding: 13px 16px;
+      margin-bottom: 7px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: var(--shadow);
+      animation: slideIn .4s ease;
+    }
+
+    .live-alert {
+      background: var(--red-light);
+      border: 1px solid var(--red-mid);
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateX(-12px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .timer-bar {
+      flex: 1;
+      height: 4px;
+      border-radius: 10px;
+      background: var(--border);
+      overflow: hidden;
+    }
+
+    .timer-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--indigo), var(--indigo2));
+      border-radius: 10px;
+      transition: width .5s linear;
+    }
+
+    /* FILTER */
+    .filter-bar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+
+    .fselect,
+    .fsearch {
+      padding: 7px 12px;
+      border: 1.5px solid var(--border);
+      border-radius: 8px;
+      font-family: 'Sora', sans-serif;
+      font-size: 12px;
+      color: var(--txt);
+      background: var(--surface);
+      outline: none;
+    }
+
+    .fselect {
+      cursor: pointer;
+    }
+
+    .fsearch {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .fselect:focus,
+    .fsearch:focus {
+      border-color: var(--indigo);
+    }
+
+    .fcount {
+      font-size: 12px;
+      color: var(--txt3);
+      white-space: nowrap;
+    }
+
+    /* EMPTY */
+    .empty {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 60px;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    .empty-icon {
+      font-size: 48px;
+      margin-bottom: 14px;
+    }
+
+    .empty-title {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--txt);
+      margin-bottom: 6px;
+    }
+
+    .empty-sub {
+      font-size: 13px;
+      color: var(--txt3);
+    }
+
+    .notes-area {
+      width: 100%;
+      min-height: 80px;
+      padding: 10px 14px;
+      border: 1.5px solid var(--border);
+      border-radius: 9px;
+      font-family: 'Sora', sans-serif;
+      font-size: 13px;
+      color: var(--txt);
+      background: var(--bg);
+      resize: vertical;
+      outline: none;
+      transition: border-color .15s;
+    }
+
+    .notes-area:focus {
+      border-color: var(--indigo);
+    }
+
+    .spinner {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border: 2px solid var(--border);
+      border-top-color: var(--indigo);
+      border-radius: 50%;
+      animation: spin .7s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .ai-loading {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 24px;
+      justify-content: center;
+      color: var(--txt3);
+      font-size: 13px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-brand">
+      <div class="nav-brand-icon">🔍</div>
+      <div class="nav-brand-name">FraudLens AI</div>
+    </div>
+    <div class="nav-pages">
+      <button class="nav-btn active" onclick="showPage('dashboard')" id="nb-dashboard"><span>🏠</span>
+        Dashboard</button>
+      <button class="nav-btn" onclick="showPage('flagged')" id="nb-flagged"><span>🚨</span> Transaction Watch</button>
+      <button class="nav-btn" onclick="showPage('investigate')" id="nb-investigate"><span>🔍</span> Investigate</button>
+      <button class="nav-btn" onclick="showPage('analytics')" id="nb-analytics"><span>📊</span> Analytics</button>
+      <button class="nav-btn" onclick="showPage('audit')" id="nb-audit"><span>📋</span> Audit Trail</button>
+      <button class="nav-btn" onclick="showPage('live')" id="nb-live"><span>📡</span> Live Feed</button>
+    </div>
+    <div class="status-pill">
+      <div class="status-dot"></div>SYSTEM LIVE
+    </div>
+  </nav>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast"><span id="toast-icon">✅</span><span id="toast-msg">Done</span></div>
+
+  <!-- DASHBOARD -->
+  <div class="page active" id="page-dashboard">
+    <div class="ph">
+      <div class="ph-title">Command Center</div>
+      <div class="ph-sub">Real-time overview of UPI transaction fraud intelligence</div>
+    </div>
+    <div class="kpi-grid">
+      <div class="kpi kpi-indigo">
+        <div class="kpi-lbl">Total Transactions</div>
+        <div class="kpi-val" id="kpi-total">—</div>
+        <div class="kpi-hint">Loaded from dataset</div>
+        <div class="kpi-icon">💳</div>
+      </div>
+      <div class="kpi kpi-red">
+        <div class="kpi-lbl">Flagged Cases</div>
+        <div class="kpi-val" id="kpi-flagged">—</div>
+        <div class="kpi-hint">Requires investigation</div>
+        <div class="kpi-icon">🚨</div>
+      </div>
+      <div class="kpi kpi-amber">
+        <div class="kpi-lbl">Critical + High Risk</div>
+        <div class="kpi-val" id="kpi-highrisk">—</div>
+        <div class="kpi-hint">Immediate action needed</div>
+        <div class="kpi-icon">⚠️</div>
+      </div>
+      <div class="kpi kpi-blue">
+        <div class="kpi-lbl">Total Volume</div>
+        <div class="kpi-val" id="kpi-volume">—</div>
+        <div class="kpi-hint">Across all transactions</div>
+        <div class="kpi-icon">📈</div>
+      </div>
+      <div class="kpi kpi-green">
+        <div class="kpi-lbl">Model Accuracy</div>
+        <div class="kpi-val" id="kpi-accuracy">94.7%</div>
+        <div class="kpi-hint">XGBoost classifier</div>
+        <div class="kpi-icon">🤖</div>
+      </div>
+    </div>
+    <div class="chart-grid">
+      <div class="card">
+        <div class="card-title">Fraud Score Distribution</div>
+        <div class="card-sub">All 1,000 transactions by risk probability</div>
+        <div style="height:220px"><canvas id="chart-dist"></canvas></div>
+      </div>
+      <div class="card">
+        <div class="card-title">Risk Level Breakdown</div>
+        <div class="card-sub">Portfolio risk classification</div>
+        <div style="height:220px"><canvas id="chart-risk"></canvas></div>
+      </div>
+    </div>
+    <div class="chart-grid-3">
+      <div class="card">
+        <div class="card-title">Flagged Transactions by City</div>
+        <div class="card-sub">Geographic fraud concentration</div>
+        <div style="height:200px"><canvas id="chart-city"></canvas></div>
+      </div>
+      <div class="card">
+        <div class="card-title">Anomaly Signal Types</div>
+        <div class="card-sub">Flag frequency breakdown</div>
+        <div style="height:200px"><canvas id="chart-flags"></canvas></div>
+      </div>
+      <div class="card">
+        <div class="card-title">Bank Distribution</div>
+        <div class="card-sub">Transactions by issuing bank</div>
+        <div style="height:200px"><canvas id="chart-bank"></canvas></div>
+      </div>
+    </div>
+    <div class="sh">
+      <div class="sh-left">
+        <div class="sh-title">Top Priority Alerts</div>
+        <div class="sh-badge">Requires Immediate Action</div>
+      </div>
+    </div>
+    <div id="dash-top-alerts" class="txn-list"></div>
+  </div>
+
+  <!-- FLAGGED CASES -->
+  <div class="page" id="page-flagged">
+    <div class="ph">
+      <div class="ph-title">Transaction Watch</div>
+      <div class="ph-sub">All transactions flagged for investigation, sorted by risk</div>
+    </div>
+    <div class="filter-bar">
+      <select class="fselect" id="filter-risk" onchange="renderFlagged()">
+        <option value="ALL">All Transactions</option>
+        <option value="FLAGGED">🚩 Flagged Only</option>
+        <option value="CRITICAL">🔴 Critical</option>
+        <option value="HIGH">🟡 High</option>
+        <option value="MEDIUM">🔵 Medium</option>
+        <option value="LOW">🟢 Low</option>
+      </select>
+      <input class="fsearch" type="text" id="filter-search" placeholder="Search by ID, customer name, city…"
+        oninput="renderFlagged()" />
+      <span class="fcount" id="flagged-count-label">— results</span>
+    </div>
+    <div id="flagged-list" class="txn-list"></div>
+    <div class="pagination" id="flagged-pagination"></div>
+  </div>
+
+  <!-- INVESTIGATE -->
+  <div class="page" id="page-investigate">
+    <div class="ph">
+      <div class="ph-title">Investigation Panel</div>
+      <div class="ph-sub">Deep-dive analysis with AI-generated investigation report</div>
+    </div>
+    <div id="inv-empty" class="empty">
+      <div class="empty-icon">🔍</div>
+      <div class="empty-title">No transaction selected</div>
+      <div class="empty-sub">Click "Investigate →" on any flagged transaction to open the investigation panel here.
+      </div>
+    </div>
+    <div id="inv-content" style="display:none">
+      <div class="chart-grid" style="margin-bottom:14px;">
+        <div>
+          <div class="score-hero" id="inv-score-hero">
+            <div class="score-lbl">Fraud Probability Score</div>
+            <div class="score-num" id="inv-score-num">—</div>
+            <div class="score-sub" id="inv-score-sub">—</div>
+          </div>
+          <div class="icard" style="margin-bottom:14px;">
+            <div class="icard-title">⚡ Risk Signal Breakdown</div>
+            <div id="inv-bars"></div>
+          </div>
+          <div class="icard">
+            <div class="icard-title">🚩 Anomaly Flags</div>
+            <div id="inv-flags"></div>
+          </div>
+        </div>
+        <div>
+          <div class="icard">
+            <div class="icard-title">💳 Transaction Details</div>
+            <div id="inv-txn-rows"></div>
+          </div>
+          <div class="icard">
+            <div class="icard-title">👤 Customer Profile</div>
+            <div id="inv-cust-rows"></div>
+          </div>
+          <div class="icard">
+            <div class="icard-title">🏪 Merchant Information</div>
+            <div id="inv-merch-rows"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sh">
+        <div class="sh-left">
+          <div class="sh-title">AI Investigation Report</div>
+          <div class="sh-badge">Claude AI Powered</div>
+        </div>
+        <button onclick="generateReport()" id="gen-btn"
+          style="padding:8px 20px;border-radius:8px;border:none;background:linear-gradient(135deg,#4F46E5,#7C3AED);color:#fff;font-size:12px;font-weight:700;cursor:pointer;font-family:'Sora',sans-serif;box-shadow:0 4px 12px rgba(79,70,229,.3);display:flex;align-items:center;gap:6px;">
+          <span>🤖</span> Generate AI Report
+        </button>
+      </div>
+      <div id="report-area">
+        <div class="empty" style="padding:40px;">
+          <div class="empty-icon" style="font-size:36px;">🤖</div>
+          <div class="empty-title" style="font-size:15px;">AI Report Not Generated</div>
+          <div class="empty-sub">Click "Generate AI Report" to get a Claude AI-powered investigation analysis.</div>
+        </div>
+      </div>
+      <div class="icard" style="margin-top:14px;">
+        <div class="icard-title">⚖️ Officer Decision</div>
+        <textarea class="notes-area" id="officer-notes"
+          placeholder="Add case notes, observations, or justification…"></textarea>
+        <div class="decision-row">
+          <button class="dbtn dbtn-confirm" onclick="makeDecision('CONFIRMED')">🚫 Confirm Fraud</button>
+          <button class="dbtn dbtn-clear" onclick="makeDecision('CLEARED')">✅ Clear Transaction</button>
+          <button class="dbtn dbtn-escalate" onclick="makeDecision('ESCALATED')">📤 Escalate</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ANALYTICS -->
+  <div class="page" id="page-analytics">
+    <div class="ph">
+      <div class="ph-title">Analytics Hub</div>
+      <div class="ph-sub">Deep insights across transactions, customers, merchants and risk patterns</div>
+    </div>
+    <div class="chart-grid">
+      <div class="card">
+        <div class="card-title">Amount vs Fraud Score</div>
+        <div class="card-sub">Scatter analysis — transaction size vs risk probability</div>
+        <div style="height:240px"><canvas id="chart-scatter"></canvas></div>
+      </div>
+      <div class="card">
+        <div class="card-title">Fraud Risk by Customer Age Group</div>
+        <div class="card-sub">Average fraud score per age bracket</div>
+        <div style="height:240px"><canvas id="chart-age"></canvas></div>
+      </div>
+    </div>
+    <div class="chart-grid">
+      <div class="card">
+        <div class="card-title">Top Merchants by Fraud Exposure</div>
+        <div class="card-sub">Average fraud score of transactions per merchant</div>
+        <div style="height:240px"><canvas id="chart-merch"></canvas></div>
+      </div>
+      <div class="card">
+        <div class="card-title">Transaction Volume by City</div>
+        <div class="card-sub">Flagged vs clean transactions per city</div>
+        <div style="height:240px"><canvas id="chart-cityvol"></canvas></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AUDIT TRAIL -->
+  <div class="page" id="page-audit">
+    <div class="ph">
+      <div class="ph-title">Audit Trail</div>
+      <div class="ph-sub">Full compliance log of all officer decisions</div>
+    </div>
+    <div class="kpi-grid" style="grid-template-columns:repeat(4,1fr);">
+      <div class="kpi kpi-indigo">
+        <div class="kpi-lbl">Total Decisions</div>
+        <div class="kpi-val" id="aud-total">0</div>
+      </div>
+      <div class="kpi kpi-red">
+        <div class="kpi-lbl">Fraud Confirmed</div>
+        <div class="kpi-val" id="aud-confirmed">0</div>
+      </div>
+      <div class="kpi kpi-green">
+        <div class="kpi-lbl">Cleared</div>
+        <div class="kpi-val" id="aud-cleared">0</div>
+      </div>
+      <div class="kpi kpi-amber">
+        <div class="kpi-lbl">Escalated</div>
+        <div class="kpi-val" id="aud-escalated">0</div>
+      </div>
+    </div>
+    <div id="audit-table-wrap">
+      <div class="empty">
+        <div class="empty-icon">📋</div>
+        <div class="empty-title">No Decisions Yet</div>
+        <div class="empty-sub">Make officer decisions in the Investigation Panel to populate this log.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LIVE FEED -->
+  <div class="page" id="page-live">
+    <div class="ph">
+      <div class="ph-title">Live Transaction Feed</div>
+      <div class="ph-sub">Real-time simulation — new transaction every 20 seconds</div>
+    </div>
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;flex-wrap:wrap;">
+      <div class="live-badge">
+        <div class="live-dot"></div> STREAMING LIVE
+      </div>
+      <span id="live-count-label" style="font-size:12px;color:var(--txt3);">0 transactions received</span>
+      <button onclick="toggleLiveFeed()" id="live-toggle-btn"
+        style="padding:6px 16px;border-radius:8px;border:1.5px solid var(--indigo);color:var(--indigo);background:var(--indigo-light);font-size:12px;font-weight:700;cursor:pointer;font-family:'Sora',sans-serif;">⏸
+        Pause</button>
+    </div>
+    <div
+      style="background:var(--indigo-light);border:1px solid var(--indigo-mid);border-radius:10px;padding:12px 16px;margin-bottom:14px;display:flex;align-items:center;gap:10px;font-size:12px;color:var(--indigo);font-weight:700;">
+      Next transaction in
+      <div class="timer-bar">
+        <div class="timer-fill" id="timer-fill" style="width:100%"></div>
+      </div>
+      <span id="timer-countdown"
+        style="font-size:13px;font-family:'JetBrains Mono',monospace;min-width:35px;">20s</span>
+    </div>
+    <div id="live-feed-list"></div>
+  </div>
+
+  <script>
+    // ── DATA STATE ──
+    let ALL_TXNS = [];
+    let auditLog = [];
+    let currentTxn = null;
+    let currentReport = null;
+    let flaggedPage = 1;
+    const PAGE_SIZE = 12;
+
+    // ── NAV ──
+    function showPage(id) {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+      document.getElementById('page-' + id).classList.add('active');
+      document.getElementById('nb-' + id).classList.add('active');
+      if (id === 'audit') renderAudit();
+      if (id === 'analytics') renderAnalytics();
+    }
+
+    // ── TOAST ──
+    function showToast(icon, msg) {
+      const t = document.getElementById('toast');
+      document.getElementById('toast-icon').textContent = icon;
+      document.getElementById('toast-msg').textContent = msg;
+      t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 3000);
+    }
+
+    // ── DATA FETCHING ──
+    async function fetchMetrics() {
+      try {
+        const res = await fetch('/api/metrics');
+        const data = await res.json();
+        const total = document.getElementById('kpi-total');
+        const flagged = document.getElementById('kpi-flagged');
+        const hr = document.getElementById('kpi-highrisk');
+        const acc = document.getElementById('kpi-accuracy');
+        const vol = document.getElementById('kpi-volume');
+
+        if (total) total.textContent = (data.total_transactions || 0).toLocaleString();
+        if (flagged) flagged.textContent = data.flagged_cases || 0;
+        if (hr) hr.textContent = data.high_risk || 0;
+        if (acc) acc.textContent = (data.model_accuracy || 94.7).toFixed(1) + '%';
+        if (vol) {
+          const v = data.total_volume || 0;
+          const vStr = v >= 1e7 ? (v / 1e7).toFixed(1) + 'Cr' : (v / 1e5).toFixed(1) + 'L';
+          vol.textContent = '₹' + vStr;
+        }
+      } catch (err) { console.error('Metrics failed:', err); }
+    }
+
+    async function fetchTransactions() {
+      try {
+        const res = await fetch('/api/transactions');
+        ALL_TXNS = await res.json();
+        renderTable();
+        refreshDashboard();
+      } catch (err) { console.error('Txns failed:', err); }
+    }
+
+    // ── CHARTS MANAGEMENT ──
+    const CHARTS = {};
+    function refreshDashboard() {
+      const flagged = ALL_TXNS.filter(t => t.flagged);
+      const critical = ALL_TXNS.filter(t => t.risk === 'CRITICAL');
+      const high = ALL_TXNS.filter(t => t.risk === 'HIGH');
+
+      document.getElementById('kpi-total').textContent = ALL_TXNS.length.toLocaleString();
+      document.getElementById('kpi-flagged').textContent = flagged.length;
+      document.getElementById('kpi-highrisk').textContent = critical.length + high.length;
+
+      const vol = ALL_TXNS.reduce((s, t) => s + t.amount, 0);
+      const volStr = vol >= 1e7 ? (vol / 1e7).toFixed(1) + 'Cr' : (vol / 1e5).toFixed(1) + 'L';
+      document.getElementById('kpi-volume').textContent = '₹' + volStr;
+
+      // Histogram
+      const bins = Array.from({ length: 10 }, (_, i) => ({ label: `${i * 10}–${i * 10 + 10}`, count: 0 }));
+      ALL_TXNS.forEach(t => { const b = Math.min(Math.floor(t.fraud_score / 10), 9); bins[b].count++; });
+      updateChart('chart-dist', 'bar', bins.map(b => b.label), bins.map(b => b.count),
+        bins.map((_, i) => i >= 8 ? '#DC2626' : i >= 6 ? '#D97706' : i >= 4 ? '#2563EB' : '#10B981'));
+
+      // Risk Donut
+      const rc = { CRITICAL: critical.length, HIGH: high.length, MEDIUM: ALL_TXNS.filter(t => t.risk === 'MEDIUM').length, LOW: ALL_TXNS.filter(t => t.risk === 'LOW').length };
+      updateChart('chart-risk', 'doughnut', Object.keys(rc), Object.values(rc), ['#DC2626', '#D97706', '#2563EB', '#059669']);
+
+      // City Bar
+      const cm = {}; flagged.forEach(t => { cm[t.location] = (cm[t.location] || 0) + 1; });
+      const cs = Object.entries(cm).sort((a, b) => b[1] - a[1]).slice(0, 8);
+      updateChart('chart-city', 'bar', cs.map(c => c[0]), cs.map(c => c[1]), '#4F46E5', { indexAxis: 'y' });
+
+      // Flags
+      const fc = { 'New Device': 0, 'Unknown IP': 0, 'Diff City': 0, 'High Amount': 0 };
+      ALL_TXNS.forEach(t => {
+        if (t.new_device) fc['New Device']++;
+        if (t.new_ip) fc['Unknown IP']++;
+        if (t.diff_city) fc['Diff City']++;
+        if (t.amt_ratio > 3) fc['High Amount']++;
+      });
+      updateChart('chart-flags', 'bar', Object.keys(fc), Object.values(fc), ['#DC2626', '#D97706', '#2563EB', '#7C3AED']);
+
+      // Top alerts
+      const top = [...ALL_TXNS].sort((a, b) => b.fraud_score - a.fraud_score).slice(0, 6);
+      renderTxnList(document.getElementById('dash-top-alerts'), top);
+    }
+
+    function updateChart(id, type, labels, values, colors, extraOptions = {}) {
+      if (CHARTS[id]) CHARTS[id].destroy();
+      const ctx = document.getElementById(id);
+      if (!ctx) return;
+      CHARTS[id] = new Chart(ctx, {
+        type: type,
+        data: { labels: labels, datasets: [{ data: values, backgroundColor: colors, borderRadius: type === 'bar' ? 5 : 0, borderWidth: type === 'doughnut' ? 3 : 0, borderColor: '#fff' }] },
+        options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: type === 'doughnut', position: 'right' } }, ...extraOptions }
+      });
+    }
+
+    // ── LISTS & TABLES ──
+    function renderTable() {
+      renderFlagged();
+    }
+
+    // ── FLAGGED PAGE ──
+    function getFilteredFlagged() {
+      const risk = document.getElementById('filter-risk').value;
+      const q = document.getElementById('filter-search').value.toLowerCase();
+      let list = [...ALL_TXNS];
+      if (risk === 'FLAGGED') list = list.filter(t => t.flagged);
+      else if (risk !== 'ALL') list = list.filter(t => t.risk === risk);
+      if (q) list = list.filter(t => t.id.toLowerCase().includes(q) || t.customer_name.toLowerCase().includes(q) || t.location.toLowerCase().includes(q));
+      return list.sort((a, b) => b.fraud_score - a.fraud_score);
+    }
+    function renderFlagged() {
+      flaggedPage = 1;
+      const list = getFilteredFlagged();
+      document.getElementById('flagged-count-label').textContent = `${list.length} results`;
+      renderFlaggedPage(list);
+    }
+    function renderFlaggedPage(list) {
+      if (!list) list = getFilteredFlagged();
+      const totalPages = Math.ceil(list.length / PAGE_SIZE);
+      const page = list.slice((flaggedPage - 1) * PAGE_SIZE, flaggedPage * PAGE_SIZE);
+      renderTxnList(document.getElementById('flagged-list'), page);
+      const pg = document.getElementById('flagged-pagination'); pg.innerHTML = '';
+      if (totalPages <= 1) return;
+      const prev = document.createElement('button'); prev.className = 'pg-btn'; prev.textContent = '← Prev'; prev.disabled = flaggedPage <= 1; prev.onclick = () => { flaggedPage--; renderFlaggedPage(list); }; pg.appendChild(prev);
+      const info = document.createElement('span'); info.className = 'pg-info'; info.textContent = `Page ${flaggedPage} of ${totalPages}`; pg.appendChild(info);
+      const next = document.createElement('button'); next.className = 'pg-btn'; next.textContent = 'Next →'; next.disabled = flaggedPage >= totalPages; next.onclick = () => { flaggedPage++; renderFlaggedPage(list); }; pg.appendChild(next);
+    }
+    function renderTxnList(container, list) {
+      container.innerHTML = '';
+      if (!list.length) { container.innerHTML = '<div class="empty"><div class="empty-icon">🔍</div><div class="empty-title">No transactions found</div></div>'; return; }
+      list.forEach(t => {
+        const row = document.createElement('div'); row.className = 'txn-row';
+        row.innerHTML = `
+      <div class="txn-score-ring ring-${t.risk}">${t.fraud_score}%</div>
+      <div class="txn-main">
+        <div class="txn-id">${t.id}</div>
+        <div class="txn-name">${t.customer_name}</div>
+        <div class="txn-meta"><span>📍 ${t.location}</span><span>🕐 ${t.timestamp}</span><span>🏦 ${t.customer_bank}</span><span>👤 ${t.customer_id}</span></div>
+      </div>
+      <div class="txn-right">
+        <div class="txn-amount">₹${t.amount.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</div>
+        <span class="rb rb-${t.risk}">${t.risk}</span>
+        <span style="font-size:10px;color:var(--txt3);">${t.flags.length} flag(s)</span>
+      </div>
+      <button class="inv-btn" onclick="event.stopPropagation();openInvestigate('${t.id}')">Investigate →</button>`;
+        row.onclick = () => openInvestigate(t.id);
+        container.appendChild(row);
+      });
+    }
+
+    // ── INVESTIGATE ──
+    function openInvestigate(id) {
+      const txn = ALL_TXNS.find(t => t.id === id); if (!txn) return;
+      currentTxn = txn; currentReport = null;
+      showPage('investigate');
+      document.getElementById('inv-empty').style.display = 'none';
+      document.getElementById('inv-content').style.display = 'block';
+
+      // Score hero
+      const heroColors = { CRITICAL: 'linear-gradient(135deg,#DC2626,#B91C1C)', HIGH: 'linear-gradient(135deg,#D97706,#B45309)', MEDIUM: 'linear-gradient(135deg,#2563EB,#1D4ED8)', LOW: 'linear-gradient(135deg,#059669,#047857)' };
+      document.getElementById('inv-score-hero').style.background = heroColors[txn.risk];
+      document.getElementById('inv-score-num').textContent = txn.fraud_score + '%';
+      document.getElementById('inv-score-sub').textContent = `${txn.risk} Risk · ${txn.flags.length} anomaly flag(s) detected`;
+
+      // Bars
+      const bars = [
+        { label: 'Device Risk', val: txn.new_device ? 88 : 6, color: '#DC2626' },
+        { label: 'IP Risk', val: txn.new_ip ? 82 : 6, color: '#D97706' },
+        { label: 'Location Risk', val: txn.diff_city ? 65 : 8, color: '#2563EB' },
+        { label: 'Amount Risk', val: Math.min(txn.amt_ratio * 18, 94), color: '#7C3AED' },
+      ];
+      document.getElementById('inv-bars').innerHTML = bars.map(b => `
+    <div class="pbar-wrap">
+      <div class="pbar-label"><span>${b.label}</span><span style="color:${b.color}">${Math.round(b.val)}%</span></div>
+      <div class="pbar-track"><div class="pbar-fill" style="width:${b.val}%;background:${b.color}"></div></div>
+    </div>`).join('');
+
+      // Flags
+      const fe = document.getElementById('inv-flags');
+      fe.innerHTML = txn.flags.length ? txn.flags.map(f => `<div class="flag-item flag-danger">⚠️ ${f}</div>`).join('')
+        : '<div class="flag-item flag-ok">✅ No anomaly flags detected</div>';
+
+      // Rows
+      iRows('inv-txn-rows', [
+        ['Transaction ID', txn.id, 'blue'],
+        ['Amount', '₹' + txn.amount.toLocaleString('en-IN', { minimumFractionDigits: 2 }), txn.fraud_score > 60 ? 'red' : 'green'],
+        ['Timestamp', txn.timestamp, ''],
+        ['Location', txn.location, txn.diff_city ? 'red' : ''],
+        ['Device Used', txn.device, txn.new_device ? 'red' : 'green'],
+        ['IP Address', txn.ip, txn.new_ip ? 'red' : 'green'],
+        ['Merchant', txn.merchant_name, ''],
+      ]);
+      iRows('inv-cust-rows', [
+        ['Name', txn.customer_name, ''],
+        ['Customer ID', txn.customer_id, 'blue'],
+        ['Age', String(txn.customer_age), ''],
+        ['Bank', txn.customer_bank, ''],
+        ['Home Branch', txn.customer_branch, ''],
+        ['Balance', '₹' + txn.customer_balance.toLocaleString('en-IN', { minimumFractionDigits: 2 }), 'green'],
+        ['Last Txn Amt', '₹' + txn.customer_last_amt.toLocaleString('en-IN', { minimumFractionDigits: 2 }), ''],
+        ['Amount Ratio', txn.amt_ratio + 'x vs last', txn.amt_ratio > 2 ? 'red' : 'green'],
+        ['Reg. Device', txn.customer_reg_device, ''],
+        ['Reg. IP', txn.customer_reg_ip, ''],
+        ['Total Txns', String(txn.customer_txn_count), ''],
+        ['UPI ID', txn.customer_upi, 'blue'],
+      ]);
+      iRows('inv-merch-rows', [
+        ['Merchant Name', txn.merchant_name, ''],
+        ['Merchant ID', txn.merchant_id, 'blue'],
+        ['UPI ID', txn.merchant_upi, ''],
+        ['Bank', txn.merchant_bank, ''],
+        ['Branch', txn.merchant_branch, ''],
+        ['Account Since', txn.merchant_since || '—', ''],
+      ]);
+
+      // Reset report + populate api key if saved
+      document.getElementById('report-area').innerHTML = `<div class="empty" style="padding:40px;"><div class="empty-icon" style="font-size:36px;">🤖</div><div class="empty-title" style="font-size:15px;">AI Report Not Generated</div><div class="empty-sub">Click "Generate AI Report" to get a Claude AI-powered investigation analysis.</div></div>`;
+      document.getElementById('officer-notes').value = '';
+    }
+    function iRows(id, rows) {
+      document.getElementById(id).innerHTML = rows.map(([l, v, c]) => `<div class="irow"><span class="irow-lbl">${l}</span><span class="irow-val ${c}">${v || '—'}</span></div>`).join('');
+    }
+
+    // ── AI REPORT — routed through Flask backend (no client-side API key) ──
+    async function generateReport() {
+      if (!currentTxn) return;
+      const t = currentTxn;
+      document.getElementById('report-area').innerHTML = `<div class="ai-loading"><div class="spinner"></div><span>Claude AI is analyzing this transaction…</span></div>`;
+      let report;
+      try {
+        const res = await fetch('/api/report', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ transaction_uuid: t.id })
+        });
+        if (!res.ok) throw new Error('Backend error ' + res.status);
+        report = await res.json();
+      } catch (e) {
+        console.error('Report generation failed:', e);
+        report = fallbackReport(t);
+      }
+      currentReport = report; renderReport(report, t);
+    }
+    function fallbackReport(t) {
+      const outcome = t.fraud_score >= 75 ? 'FRAUD_CONFIRMED' : t.fraud_score >= 45 ? 'SUSPICIOUS' : 'CLEARED';
+      return {
+        investigation_outcome: outcome,
+        executive_summary: `Transaction ${t.id} for ₹${t.amount.toLocaleString('en-IN')} by ${t.customer_name} has been analyzed with a fraud probability of ${t.fraud_score}%. ${t.flags.length} anomaly signals were detected during automated screening.`,
+        detected_inconsistencies: t.flags.length ? t.flags : ['No critical inconsistencies detected'],
+        reasoning: `The ML model flagged this transaction at ${t.fraud_score}% fraud probability based on ${t.flags.length} detected signals. ${t.new_device ? 'The transaction was made from an unregistered device — a strong indicator of account compromise. ' : ''}${t.new_ip ? 'An unknown IP address was detected, suggesting the customer may not be initiating this transaction. ' : ''}${t.diff_city ? `The transaction occurred in ${t.location} while the customer\'s home branch is ${t.customer_branch}. ` : ''}${t.amt_ratio > 2 ? `The amount is ${t.amt_ratio}x above the customer\'s baseline, which is statistically anomalous. ` : ''}Based on the combination of signals, the investigation concludes this transaction is ${outcome === 'FRAUD_CONFIRMED' ? 'likely fraudulent' : outcome === 'SUSPICIOUS' ? 'suspicious and requires officer review' : 'within acceptable parameters with noted anomalies'}.`,
+        recommended_action: outcome === 'FRAUD_CONFIRMED' ? 'Immediately block transaction and notify customer on registered mobile number' : 'Flag for senior officer review and verify with customer via registered contact',
+        supporting_evidence: t.flags.length ? t.flags : ['Transaction within normal parameters'],
+        mitigating_factors: t.customer_txn_count > 100 ? [`Established account with ${t.customer_txn_count} historical transactions`] : []
+      };
+    }
+    function renderReport(r, t) {
+      const oi = { FRAUD_CONFIRMED: '🚫', SUSPICIOUS: '⚠️', CLEARED: '✅' };
+      const ol = { FRAUD_CONFIRMED: 'Fraud Confirmed', SUSPICIOUS: 'Suspicious — Further Review Required', CLEARED: 'Transaction Cleared' };
+      document.getElementById('report-area').innerHTML = `
+    <div class="report-wrap">
+      <div class="report-outcome outcome-${r.investigation_outcome}">
+        <div class="ro-icon">${oi[r.investigation_outcome] || '📋'}</div>
+        <div><div class="ro-title">${ol[r.investigation_outcome] || r.investigation_outcome}</div><div class="ro-sub">Investigation completed · Score: ${t.fraud_score}% · ${t.flags.length} flag(s)</div></div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;">
+        <div>
+          <div class="rsection"><div class="rsec-title">📄 Executive Summary</div><div class="rsec-text">${r.executive_summary}</div></div>
+          <div class="rsection"><div class="rsec-title">🔎 Detected Inconsistencies</div>${r.detected_inconsistencies.map(i => `<div class="rbullet"><div class="rbullet-dot" style="background:#DC2626"></div>${i}</div>`).join('')}</div>
+          ${r.mitigating_factors?.length ? `<div class="rsection"><div class="rsec-title">🟢 Mitigating Factors</div>${r.mitigating_factors.map(f => `<div class="rbullet"><div class="rbullet-dot" style="background:#059669"></div>${f}</div>`).join('')}</div>` : ''}
+        </div>
+        <div>
+          <div class="rsection"><div class="rsec-title">📌 Supporting Evidence</div>${r.supporting_evidence.map(e => `<div class="evidence-item">🔷 ${e}</div>`).join('')}</div>
+          <div class="rsection"><div class="rsec-title">→ Recommended Action</div><div style="background:var(--indigo-light);border:1px solid var(--indigo-mid);border-radius:9px;padding:12px 14px;font-size:13px;color:#3730A3;font-weight:600;">${r.recommended_action}</div></div>
+        </div>
+      </div>
+      <div class="rsection" style="margin-top:14px;border-top:1px solid var(--border);padding-top:14px;"><div class="rsec-title">🧠 AI Reasoning</div><div class="rsec-text">${r.reasoning}</div></div>
+    </div>`;
+    }
+
+    // ── DECISIONS ──
+    async function makeDecision(decision) {
+      if (!currentTxn) return;
+      const notes = document.getElementById('officer-notes').value;
+      const outcome = currentReport?.investigation_outcome || (currentTxn.fraud_score >= 75 ? 'FRAUD_CONFIRMED' : currentTxn.fraud_score >= 45 ? 'SUSPICIOUS' : 'CLEARED');
+      try {
+        await fetch('/api/decision', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ transaction_id: currentTxn.id, officer_decision: decision, notes, investigation_outcome: outcome, risk_level: currentTxn.risk, fraud_probability: currentTxn.fraud_score, report: currentReport })
+        });
+        showToast('✅', `Case marked as ${decision}`);
+        showPage('dashboard');
+        fetchAuditLogs();
+      } catch (err) { console.error('Decision failed:', err); }
+    }
+
+    // ── AUDIT & ANALYTICS ──
+    function renderAudit() {
+      const wrap = document.getElementById('audit-table-wrap');
+      if (!wrap) return;
+      const conf = auditLog.filter(a => a.officer_decision === 'CONFIRMED').length;
+      const clr = auditLog.filter(a => a.officer_decision === 'CLEARED').length;
+      const esc = auditLog.filter(a => a.officer_decision === 'ESCALATED').length;
+      if (document.getElementById('aud-total')) document.getElementById('aud-total').textContent = auditLog.length;
+      if (document.getElementById('aud-confirmed')) document.getElementById('aud-confirmed').textContent = conf;
+      if (document.getElementById('aud-cleared')) document.getElementById('aud-cleared').textContent = clr;
+      if (document.getElementById('aud-escalated')) document.getElementById('aud-escalated').textContent = esc;
+      if (!auditLog.length) { wrap.innerHTML = '<div class="empty">No decisions found</div>'; return; }
+      wrap.innerHTML = `<div class="at-head"><span>Transaction ID</span><span>Decision</span><span>Time</span></div>` +
+        auditLog.map(a => `<div class="at-row"><span>${a.transaction_id}</span><span class="dec-${a.officer_decision}">${a.officer_decision}</span><span>${new Date(a.decided_at).toLocaleString()}</span></div>`).join('');
+    }
+
+    function renderAnalytics() {
+      const sample = ALL_TXNS.filter((_, i) => i % 10 === 0);
+      const cm = { CRITICAL: '#DC2626', HIGH: '#D97706', MEDIUM: '#2563EB', LOW: '#059669' };
+      updateChart('chart-scatter', 'scatter', [], sample.map(t => ({ x: t.amount, y: t.fraud_score })), sample.map(t => cm[t.risk] + '99'));
+      const cities = ['Bangalore', 'Mumbai', 'Kolkata', 'Ahmedabad', 'Chennai', 'Pune', 'Delhi', 'Hyderabad'];
+      const fl = [], cl = [];
+      cities.forEach(c => { const ct = ALL_TXNS.filter(t => t.location === c); fl.push(ct.filter(t => t.flagged).length); cl.push(ct.filter(t => !t.flagged).length); });
+      updateChart('chart-cityvol', 'bar', cities, fl, '#DC2626');
+    }
+
+    // ── LIVE FEED ──
+    let liveRunning = true, liveIdx = 0, liveCount = 0, liveTimerStart = Date.now(), liveTimer = null;
+    const LIVE_INTERVAL = 15000;
+    function toggleLiveFeed() {
+      liveRunning = !liveRunning;
+      document.getElementById('live-toggle-btn').textContent = liveRunning ? '⏸ Pause' : '▶ Resume';
+      if (liveRunning) { liveTimerStart = Date.now(); scheduleLive(); } else clearTimeout(liveTimer);
+    }
+    function scheduleLive() { liveTimer = setTimeout(() => { addLiveTransaction(); liveTimerStart = Date.now(); if (liveRunning) scheduleLive(); }, LIVE_INTERVAL); }
+    function addLiveTransaction() {
+      if (!ALL_TXNS.length) return;
+      const t = ALL_TXNS[Math.floor(Math.random() * ALL_TXNS.length)]; liveCount++;
+      if (document.getElementById('live-count-label')) document.getElementById('live-count-label').textContent = `${liveCount} transactions received`;
+      const feed = document.getElementById('live-feed-list');
+      if (!feed) return;
+      const card = document.createElement('div');
+      card.className = 'live-card' + (t.risk === 'CRITICAL' ? ' live-alert' : '');
+      card.innerHTML = `<div class="txn-score-ring ring-${t.risk}" style="width:40px;height:40px;font-size:10px;">${t.fraud_score}%</div><div style="flex:1"><div style="font-size:12px;font-weight:700;">${t.id}</div><div style="font-size:11px;color:var(--txt3);">${t.customer_name}</div></div><div style="text-align:right"><div style="font-weight:800;">₹${t.amount.toLocaleString()}</div><button class="inv-btn" style="padding:4px 8px;margin-top:4px" onclick="openInvestigate('${t.id}')">View</button></div>`;
+      feed.insertBefore(card, feed.firstChild);
+      if (feed.children.length > 20) feed.removeChild(feed.lastChild);
+    }
+    function updateTimer() {
+      if (!liveRunning) return;
+      const rem = Math.max(0, LIVE_INTERVAL - (Date.now() - liveTimerStart));
+      const fill = document.getElementById('timer-fill'); if (fill) fill.style.width = (rem / LIVE_INTERVAL * 100) + '%';
+      const cd = document.getElementById('timer-countdown'); if (cd) cd.textContent = Math.ceil(rem / 1000) + 's';
+    }
+
+    async function fetchAuditLogs() {
+      try {
+        const res = await fetch('/api/audit');
+        auditLog = await res.json();
+        renderAudit();
+      } catch (err) { console.error('Audit fetch failed:', err); }
+    }
+
+    // ── INIT ──
+    window.addEventListener('DOMContentLoaded', async () => {
+      await fetchMetrics();
+      await fetchTransactions();
+      await fetchAuditLogs();
+      renderFlagged();
+      setInterval(async () => { await fetchMetrics(); await fetchTransactions(); await fetchAuditLogs(); }, 15000);
+      liveTimerStart = Date.now();
+      scheduleLive();
+      setInterval(updateTimer, 500);
+    });
+  </script>
+</body>
+
+</html>
